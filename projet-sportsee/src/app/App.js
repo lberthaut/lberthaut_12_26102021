@@ -1,13 +1,14 @@
 import React from 'react';
 import Userpage from '../pages/userpage.js';
-import {Route, BrowerRouter} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
+import Pageuserstyle from '../styles/pageuserstyle.js';
 
 export default class App extends React.Component{
     render(){
         return(
-            <BrowerRouter>
-                <Route exact path="/" component={Userpage}/>
-            </BrowerRouter>
+            <BrowserRouter>
+                <Route exact path="/" component={Userpage}/><Pageuserstyle/>
+            </BrowserRouter>
         )
     }
 }

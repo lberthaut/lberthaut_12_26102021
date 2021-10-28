@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, NavLink} from 'react-router-dom';
-import logo from '../..assets/logo.png';
+import logo from '../../assets/logo.png'
 
 export default class Horizontallayout extends React.Component{
     render(){
@@ -9,7 +9,7 @@ export default class Horizontallayout extends React.Component{
             <Link>
                 <img className="logo" src={logo} alt="logo"></img>
             </Link>
-                <ul>
+                <ul className="menu">
                     <NavLink to="/accueil">
                         <p>Accueil</p>
                     </NavLink>
