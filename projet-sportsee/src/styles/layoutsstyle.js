@@ -45,6 +45,7 @@ const Layoutstyle = createGlobalStyle`
     justify-content: space-between;
     padding-bottom: 80px;
     padding-top: 100px;
+    padding-left: 25px;
 }
 
 .icons{
@@ -60,7 +61,7 @@ const Layoutstyle = createGlobalStyle`
     font-size: 12px;
     width: 150px;
     margin: 0;
-    padding-bottom: 70%;
+    padding-bottom: 40px;
 }
 
 `

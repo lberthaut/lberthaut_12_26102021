@@ -7,8 +7,8 @@ import bodybuilding from '../../assets/dumbbell.png'
 export default class Verticallayouts extends React.Component {
     render (){
         return(
-            <menu className="verticallayout">
-                <nav className="iconsbar">
+            <nav className="verticallayout">
+                <ul className="iconsbar">
                     <button className="yoga icons">
                         <img className="yogapic" src={yogapic} alt="yoga"></img>
                     </button>
@@ -21,9 +21,9 @@ export default class Verticallayouts extends React.Component {
                     <button className="bodybuilding icons">
                         <img className="bodybuilding" src={bodybuilding} alt="bodybuilding"></img>
                     </button>
-                </nav>
+                </ul>
                 <p className="copyright">Copiryght, SportSee 2021</p>
-            </menu>
+            </nav>
         )
     }
 }

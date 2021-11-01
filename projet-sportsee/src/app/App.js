@@ -7,7 +7,7 @@ export default class App extends React.Component{
     render(){
         return(
             <BrowserRouter>
-                <Route exact path="/" component={Userpage}/><Pageuserstyle/>
+                <Route exact path="/" render={(props) => <Userpage {...props}/>}/><Pageuserstyle/>
             </BrowserRouter>
         )
     }
