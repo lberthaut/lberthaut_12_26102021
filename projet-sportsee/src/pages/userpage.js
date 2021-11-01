@@ -6,6 +6,8 @@ import Hellobanner from '../components/userstats/hellobanner.js';
 import Hellobannerstyle from '../styles/hellobannerstyle.js';
 import Dailyactivities from '../components/userstats/dailyactivities.js';
 import Dailyactivitiesstyle from '../styles/dailiyactivitiesstyle.js';
+import Averagesessionstime from '../components/userstats/averagesessionstime.js';
+import Averagesessionstimestyle from '../styles/averagesessionstimestyle.js'
 
 export default class Userpage extends React.Component {
     render(){
@@ -15,6 +17,7 @@ export default class Userpage extends React.Component {
                 <Verticallayouts/><Layoutstyle/>
                 <Hellobanner/><Hellobannerstyle/>
                 <Dailyactivities/><Dailyactivitiesstyle/>
+                <Averagesessionstime/><Averagesessionstimestyle/>
             </Fragment>
         )
     }
