@@ -12,6 +12,8 @@ import Radargraph from '../components/userstats/radargraph.js';
 import Radargraphstyle from '../styles/radargraphstyle.js'
 import RadialBar from '../components/userstats/radialbar.js'
 import Radialbarstyle from '../styles/radialbarstyle.js'
+import Nutritionlayout from '../components/userstats/nutrition.js'
+import Nutritionlayoutstyle from '../styles/nutritionlayoutstyle.js';
 
 export default class Userpage extends React.Component {
     render(){
@@ -24,6 +26,7 @@ export default class Userpage extends React.Component {
                 <Averagesessionstime/><Averagesessionstimestyle/>
                 <Radargraph/><Radargraphstyle/>
                 <RadialBar/><Radialbarstyle/>
+                <Nutritionlayout/><Nutritionlayoutstyle/>
             </Fragment>
         )
     }

@@ -12,7 +12,8 @@ export default class Dailyactivities extends React.Component{
           <BarChart width={835} height={320} data= {datasActivities}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="day" />
-            <YAxis />
+            <YAxis dataKey="kilogram"/>
+            <YAxis dataKey="calories"/>
             <Tooltip />
             <Legend />
             <Bar dataKey="Poids (kg)" fill="#282D30" />
