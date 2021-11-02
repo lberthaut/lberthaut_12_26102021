@@ -4,7 +4,7 @@ const Averagesessionstimestyle = createGlobalStyle`
     .graphaveragetime{
         position: absolute;
         top: 590px;
-        left: 210px;
+        left: 215px;
         background-color: red;
         border-radius: 5px;
     }
@@ -16,7 +16,8 @@ const Averagesessionstimestyle = createGlobalStyle`
         background-color: black;
         position: absolute;
         top: 590px;
-        left: 400px;
+        left: 390px;
+        border-radius: 0px 5px 5px 0px;
     }
 `
 

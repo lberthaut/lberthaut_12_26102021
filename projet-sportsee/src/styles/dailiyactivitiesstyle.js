@@ -4,7 +4,7 @@ const Dailyactivitiesstyle = createGlobalStyle`
     .dailyactivitiesblock{
         position: relative;
         z-index: 10;
-        bottom: 840px;
+        bottom: 880px;
         left: 150px;
     }
 
@@ -19,8 +19,8 @@ const Dailyactivitiesstyle = createGlobalStyle`
 
     .recharts-default-legend{
         position: relative;
-        bottom: 263px;
-        left: 290px;
+        bottom: 325px;
+        left: 310px;
     }
 `
 

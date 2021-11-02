@@ -8,6 +8,8 @@ import Dailyactivities from '../components/userstats/dailyactivities.js';
 import Dailyactivitiesstyle from '../styles/dailiyactivitiesstyle.js';
 import Averagesessionstime from '../components/userstats/averagesessionstime.js';
 import Averagesessionstimestyle from '../styles/averagesessionstimestyle.js'
+import Radargraph from '../components/userstats/radargraph.js';
+import Radargraphstyle from '../styles/radargraphstyle.js'
 
 export default class Userpage extends React.Component {
     render(){
@@ -18,6 +20,7 @@ export default class Userpage extends React.Component {
                 <Hellobanner/><Hellobannerstyle/>
                 <Dailyactivities/><Dailyactivitiesstyle/>
                 <Averagesessionstime/><Averagesessionstimestyle/>
+                <Radargraph/><Radargraphstyle/>
             </Fragment>
         )
     }

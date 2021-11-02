@@ -8,15 +8,15 @@ export default class Dailyactivities extends React.Component{
     const {datasActivities}= this.props;
      return(
        <div className="dailyactivitiesblock">
-          <h2 className="dailyactivitiestitle">activités quotidienne</h2>
-          <BarChart width={730} height={250} data= {datasActivities}>
+          <h2 className="dailyactivitiestitle">Activités quotidienne</h2>
+          <BarChart width={835} height={320} data= {datasActivities}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="day" />
             <YAxis />
             <Tooltip />
             <Legend />
             <Bar dataKey="Poids (kg)" fill="#282D30" />
-            <Bar dataKey="Calories" fill="#E60000" />
+            <Bar dataKey="Calories (kCal)" fill="#E60000" />
         </BarChart>
       </div>
      )
