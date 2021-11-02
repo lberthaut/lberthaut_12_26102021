@@ -10,6 +10,8 @@ import Averagesessionstime from '../components/userstats/averagesessionstime.js'
 import Averagesessionstimestyle from '../styles/averagesessionstimestyle.js'
 import Radargraph from '../components/userstats/radargraph.js';
 import Radargraphstyle from '../styles/radargraphstyle.js'
+import RadialBar from '../components/userstats/radialbar.js'
+import Radialbarstyle from '../styles/radialbarstyle.js'
 
 export default class Userpage extends React.Component {
     render(){
@@ -21,6 +23,7 @@ export default class Userpage extends React.Component {
                 <Dailyactivities/><Dailyactivitiesstyle/>
                 <Averagesessionstime/><Averagesessionstimestyle/>
                 <Radargraph/><Radargraphstyle/>
+                <RadialBar/><Radialbarstyle/>
             </Fragment>
         )
     }
