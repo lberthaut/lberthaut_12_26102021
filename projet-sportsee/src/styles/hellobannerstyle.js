@@ -3,8 +3,13 @@ import {createGlobalStyle} from "styled-components";
 const Hellobannerstyle = createGlobalStyle`
     .banner{
         position: absolute;
-        bottom: 560px;
+        bottom: 510px;
         left: 215px;
+    }
+
+    .titlebanner{
+        display: flex;
+        flex:direction: row;
     }
 
     h1{

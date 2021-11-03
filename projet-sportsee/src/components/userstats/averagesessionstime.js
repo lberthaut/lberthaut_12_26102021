@@ -9,7 +9,7 @@ export default class Averagesessionstime extends React.Component{
             <div className="graphaveragetime">
                 <LineChart width={258} height={263} data={datasSessionsTime}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
+                <XAxis dataKey="date" hide="true"/>
                 <Tooltip />
                 <Legend />
                 </LineChart>

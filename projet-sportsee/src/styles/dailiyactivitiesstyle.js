@@ -5,7 +5,7 @@ const Dailyactivitiesstyle = createGlobalStyle`
         position: relative;
         z-index: 10;
         bottom: 880px;
-        left: 150px;
+        left: 210px;
     }
 
     .dailyactivitiestitle{

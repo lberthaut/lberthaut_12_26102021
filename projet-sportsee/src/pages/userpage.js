@@ -15,13 +15,24 @@ import Radialbarstyle from '../styles/radialbarstyle.js'
 import Nutritionlayout from '../components/userstats/nutrition.js'
 import Nutritionlayoutstyle from '../styles/nutritionlayoutstyle.js';
 
+
 export default class Userpage extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            user:{userInfos:{firstName:""}}
+        }
+    }
+    componentDidMount(){
+        fetch('http://localhost:3000/user/12').then(result => result.json()).then(data=>this.setState({user: data.data}))
+    }
     render(){
+
         return(
             <Fragment>
                 <Horizontallayout/>
                 <Verticallayouts/><Layoutstyle/>
-                <Hellobanner/><Hellobannerstyle/>
+                <Hellobanner username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>
                 <Dailyactivities/><Dailyactivitiesstyle/>
                 <Averagesessionstime/><Averagesessionstimestyle/>
                 <Radargraph/><Radargraphstyle/>

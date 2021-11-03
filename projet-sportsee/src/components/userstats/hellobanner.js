@@ -8,7 +8,7 @@ export default class Hellobanner extends React.Component{
             <div className="banner">
                 <div className="titlebanner">
                     <h1>Bonjour</h1>
-                    <p className="username">{username}</p>
+                    <p className="username">&nbsp;{username}</p>
                 </div>
                 <p className="bannerdescription">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </div>
