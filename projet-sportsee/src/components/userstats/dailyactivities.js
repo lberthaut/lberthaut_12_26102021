@@ -5,9 +5,9 @@ import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar} from 'recha
 
 export default class Dailyactivities extends React.Component{
  render(){
-    const {datasActivities}= this.props;
+    const {datasActivities, id}= this.props;
      return(
-       <div className="dailyactivitiesblock">
+       <div className="dailyactivitiesblock" key={id}>
           <h2 className="dailyactivitiestitle">Activités quotidienne</h2>
           <BarChart width={835} height={320} data= {datasActivities}>
             <CartesianGrid strokeDasharray="3 3" />

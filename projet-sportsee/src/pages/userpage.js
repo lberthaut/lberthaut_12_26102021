@@ -1,7 +1,4 @@
 import React, {Fragment} from 'react';
-import Horizontallayout from '../components/UI/horizontallayout.js';
-import Verticallayouts from '../components/UI/verticallayouts.js';
-import Layoutstyle from '../styles/layoutsstyle.js';
 import Hellobanner from '../components/userstats/hellobanner.js';
 import Hellobannerstyle from '../styles/hellobannerstyle.js';
 import Dailyactivities from '../components/userstats/dailyactivities.js';
@@ -14,30 +11,23 @@ import RadialBar from '../components/userstats/radialbar.js'
 import Radialbarstyle from '../styles/radialbarstyle.js'
 import Nutritionlayout from '../components/userstats/nutrition.js'
 import Nutritionlayoutstyle from '../styles/nutritionlayoutstyle.js';
+import {useFetch} from '../services/api.js';
 
 
 export default class Userpage extends React.Component {
-    constructor(props){
-        super(props);
-        this.state={
-            user:{userInfos:{firstName:""}}
-        }
-    }
-    componentDidMount(){
-        fetch('http://localhost:3000/user/12').then(result => result.json()).then(data=>this.setState({user: data.data}))
-    }
     render(){
+        const urlId=this.props.match.params.id;
+        const current= useFetch.data.UserId.find((data)=>data.data.id===urlId);
+        const {firstName} = current || [];
 
         return(
             <Fragment>
-                <Horizontallayout/>
-                <Verticallayouts/><Layoutstyle/>
-                <Hellobanner username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>
-                <Dailyactivities/><Dailyactivitiesstyle/>
-                <Averagesessionstime/><Averagesessionstimestyle/>
-                <Radargraph/><Radargraphstyle/>
-                <RadialBar/><Radialbarstyle/>
-                <Nutritionlayout/><Nutritionlayoutstyle/>
+                <Hellobanner username={firstName}/><Hellobannerstyle/>
+                <Dailyactivities datasActivities={'test'}/><Dailyactivitiesstyle/>
+                <Averagesessionstime datasSessionsTime={'test'}/><Averagesessionstimestyle/>
+                <Radargraph datasRadar={'test'} firstName={'test'}/><Radargraphstyle/>
+                <RadialBar datasRadial={'test'}/><Radialbarstyle/>
+                <Nutritionlayout datascalories={'test'} datasproteines={'test'} datasglucides={'test'} dataslipides={'test'}/><Nutritionlayoutstyle/>
             </Fragment>
         )
     }

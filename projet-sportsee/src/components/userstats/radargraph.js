@@ -3,10 +3,10 @@ import {RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend} f
 
 export default class Radargraph extends React.Component{
     render(){
-        const {datasRadar, firstName}= this.props;
+        const {datasRadar, firstName, id}= this.props;
 
         return(
-            <div className="radargraph">
+            <div className="radargraph" key={id}>
                 <RadarChart outerRadius={90} width={258} height={263} data={datasRadar}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="subject" />

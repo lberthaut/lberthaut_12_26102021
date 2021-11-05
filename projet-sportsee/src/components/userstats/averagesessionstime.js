@@ -3,9 +3,9 @@ import {LineChart, CartesianGrid, XAxis, Tooltip, Legend} from 'recharts'
 
 export default class Averagesessionstime extends React.Component{
     render(){
-        const {datasSessionsTime}= this.props;
+        const {datasSessionsTime, id}= this.props;
         return(
-            <div className="graphsessionstimeblock">
+            <div className="graphsessionstimeblock" key={id}>
             <div className="graphaveragetime">
                 <LineChart width={258} height={263} data={datasSessionsTime}>
                 <CartesianGrid strokeDasharray="3 3" />

@@ -2,8 +2,8 @@ import {createGlobalStyle} from "styled-components";
 
 const Hellobannerstyle = createGlobalStyle`
     .banner{
-        position: absolute;
-        bottom: 510px;
+        position: relative;
+        bottom: 960px;
         left: 215px;
     }
 

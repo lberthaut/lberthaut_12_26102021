@@ -10,7 +10,7 @@ const Dailyactivitiesstyle = createGlobalStyle`
 
     .dailyactivitiestitle{
         font-size: 14px;
-        padding-left: 65px;
+        padding-left: 10px;
     }
 
     .recharts-legend-item>svg{

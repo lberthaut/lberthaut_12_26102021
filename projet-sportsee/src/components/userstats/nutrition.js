@@ -7,10 +7,10 @@ import cheeseburger from '../../assets/cheeseburger.png'
 
 export default class Nutritionlayout extends React.Component{
     render(){
-        const {datascalories, datasproteines, datasglucides, dataslipides}= this.props;
+        const {datascalories, datasproteines, datasglucides, dataslipides, id}= this.props;
 
         return(
-            <div className="nutritionlayoutblock">
+            <div className="nutritionlayoutblock" key={id}>
                 <div className="caloriesblock nutritionblock">
                     <div className="caloriesicon iconblock">
                         <img className="caloriespic nutritionpic" src={fire} alt="calories"></img>

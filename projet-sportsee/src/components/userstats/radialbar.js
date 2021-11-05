@@ -3,9 +3,9 @@ import {RadialBarChart, RadialBar, Legend, Tooltip} from 'recharts'
 
 export default class radialbar extends React.Component{
     render(){
-        const {datasRadial}= this.props;
+        const {datasRadial, id}= this.props;
         return(
-            <div className="radialbarblock">
+            <div className="radialbarblock" key={id}>
                 <RadialBarChart 
                 width={160} 
                 height={160} 

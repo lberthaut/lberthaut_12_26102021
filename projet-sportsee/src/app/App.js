@@ -2,12 +2,24 @@ import React from 'react';
 import Userpage from '../pages/userpage.js';
 import {Route, BrowserRouter} from 'react-router-dom';
 import Pageuserstyle from '../styles/pageuserstyle.js';
+import Horizontallayout from '../components/UI/horizontallayout.js';
+import Verticallayouts from '../components/UI/verticallayouts.js';
+import Layoutstyle from '../styles/layoutsstyle.js';
 
 export default class App extends React.Component{
     render(){
+
+        const ids = [12, 18]
         return(
             <BrowserRouter>
-                <Route exact path="/" render={(props) => <Userpage {...props}/>}/><Pageuserstyle/>
+                <Horizontallayout/>
+                <Verticallayouts/><Layoutstyle/>
+               { ids.map(id =>(
+                   <>
+                    <Route exact path="/{id}" render={(props) => <Userpage {...props}/>}/><Pageuserstyle/>
+                    </>
+                ))}
+               
             </BrowserRouter>
         )
     }
