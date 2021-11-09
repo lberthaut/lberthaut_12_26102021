@@ -6,7 +6,7 @@ export default class Horizontallayout extends React.Component{
     render(){
         return(
             <nav className="horizontallayout">
-            <Link>
+            <Link to="/accueil">
                 <img className="logo" src={logo} alt="logo"></img>
             </Link>
                 <ul className="menu">

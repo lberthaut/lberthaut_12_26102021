@@ -6,17 +6,18 @@ import cheeseburger from '../../assets/cheeseburger.png'
 
 
 export default class Nutritionlayout extends React.Component{
+
     render(){
-        const {datascalories, datasproteines, datasglucides, dataslipides, id}= this.props;
+/*         const {datascalories, datasproteines, datasglucides, dataslipides, id}= this.props; */
 
         return(
-            <div className="nutritionlayoutblock" key={id}>
+            <div className="nutritionlayoutblock" key={'id'}>
                 <div className="caloriesblock nutritionblock">
                     <div className="caloriesicon iconblock">
                         <img className="caloriespic nutritionpic" src={fire} alt="calories"></img>
                     </div>
                     <div className="caloriesinfos nutritioninfos">
-                        <p className="datascalories datasnutrition">{datascalories}kCal</p>
+                        <p className="datascalories datasnutrition">{this.props.keyData.calorieCount}kCal</p>
                         <p className="nutritioninfos datasname">Calories</p>
                     </div>
                 </div>
@@ -25,7 +26,7 @@ export default class Nutritionlayout extends React.Component{
                         <img className="proteinspic nutritionpic" src={proteins} alt="proteines"></img>
                     </div>
                     <div className="proteinsinfos nutritioninfos">
-                        <p className="datasproteins datasnutrition">{datasproteines}g</p>
+                        <p className="datasproteins datasnutrition">{this.props.keyData.proteinCount}g</p>
                         <p className="nutritioninfos datasname">Protéines</p>
                     </div>
                 </div>
@@ -34,7 +35,7 @@ export default class Nutritionlayout extends React.Component{
                         <img className="glucidespic nutritionpic" src={apple} alt="glucides"></img>
                     </div>
                     <div className="glucidesinfos nutritioninfos">
-                        <p className="datasglucides datasnutrition">{datasglucides}g</p>
+                        <p className="datasglucides datasnutrition">{this.props.keyData.carbohydrateCount}g</p>
                         <p className="nutritioninfos datasname">Glucides</p>
                     </div>
                 </div>
@@ -43,7 +44,7 @@ export default class Nutritionlayout extends React.Component{
                         <img className="lipidespic nutritionpic" src={cheeseburger} alt="lipides"></img>
                     </div>
                     <div className="lipidesinfos nutritioninfos">
-                        <p className="dataslipides datasnutrition">{dataslipides}g</p>
+                        <p className="dataslipides datasnutrition">{this.props.keyData.lipidCount}g</p>
                         <p className="nutritioninfos datasname">Lipides</p>
                     </div>
                 </div>

@@ -9,16 +9,12 @@ import Layoutstyle from '../styles/layoutsstyle.js';
 export default class App extends React.Component{
     render(){
 
-        const ids = [12, 18]
         return(
             <BrowserRouter>
                 <Horizontallayout/>
                 <Verticallayouts/><Layoutstyle/>
-               { ids.map(id =>(
-                   <>
-                    <Route exact path="/{id}" render={(props) => <Userpage {...props}/>}/><Pageuserstyle/>
-                    </>
-                ))}
+                    <Route exact path='/:id' render={(props) => <Userpage {...props}/>}/>
+                <Pageuserstyle/>
                
             </BrowserRouter>
         )
