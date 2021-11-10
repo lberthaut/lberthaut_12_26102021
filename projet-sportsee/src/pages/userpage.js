@@ -19,8 +19,7 @@ export default class Userpage extends React.Component {
         super(props);
         this.state={
             user:{
-                todayScore:null,
-                userInfos:{firstName: null},
+                userInfos:{firstName: null, score: null, todayScore: null},
                 keyData:{calorieCount: null, proteinCount: null, carbohydrateCount: null, lipidCount: null}
             },
             userSessions:{
@@ -40,7 +39,6 @@ export default class Userpage extends React.Component {
         const urlId=this.props.match.params.id;
         Usefetch.getUser(urlId).then(data=>{
             this.setState({user:{
-                todayScore:data.todayScore,
                 userInfos:data.userInfos,
                 keyData:data.keyData,
             }})
@@ -71,11 +69,9 @@ export default class Userpage extends React.Component {
                 <Dailyactivities datasActivities={this.state.userActivity.sessions}/><Dailyactivitiesstyle/>
                 <Averagesessionstime datasSessionsTime={this.state.userSessions.sessions}/><Averagesessionstimestyle/>
                 <Radargraph datasRadar={this.state.userPerformance.kind} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
-                <RadialBar datasRadial={this.state.user.todayScore}/><Radialbarstyle/>
+                <RadialBar datasRadial={this.state.user.userInfos.todayScore}/><Radialbarstyle/>
                 <Nutritionlayout keyData={this.state.user.keyData}/><Nutritionlayoutstyle/>
             </Fragment>
         )
     }
 }
-
-/* datascalories={this.state.user.keyData.calorieCount} datasproteines={this.state.user.keyData.proteinCount} datasglucides={this.state.user.keyData.carbohydrateCount} dataslipides={this.state.user.keyData.lipidCount} */

@@ -9,6 +9,8 @@ const Radargraphstyle = createGlobalStyle`
         color: white;
         border-radius: 5px;
         font-color: white;
+        width: 258px;
+        height: 263px; 
     }
 
 ${'' /*     .legend-item-0{

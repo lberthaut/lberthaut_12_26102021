@@ -12,7 +12,7 @@ export default class Dailyactivities extends React.Component{
           <h2 className="dailyactivitiestitle">Activités quotidienne</h2>
           <ResponsiveContainer>
             <BarChart 
-            data={this.props.sessions} 
+            data={this.props.datasActivities} 
             barGap={8} 
             width={800} 
             height={300}

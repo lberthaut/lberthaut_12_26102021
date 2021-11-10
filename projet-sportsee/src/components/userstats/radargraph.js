@@ -9,7 +9,7 @@ export default class Radargraph extends React.Component{
                 <ResponsiveContainer>
                     <RadarChart 
                     outerRadius={90} 
-                    data={this.props.data}
+                    data={this.props.datasRadar}
                     >
                     <PolarGrid 
                     radialLines={false} 

@@ -12,7 +12,7 @@ export default class Averagesessionstime extends React.Component{
                 <LineChart 
                 width={730} 
                 height={250} 
-                data={this.props.sessions}
+                data={this.props.datasSessionsTime}
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                 >
                 <CartesianGrid 

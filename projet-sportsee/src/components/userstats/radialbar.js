@@ -12,7 +12,7 @@ export default class radialbar extends React.Component{
                 height={250}
                 >
                   <Pie
-                    data={this.props.todayScore}
+                    data={this.props.datasRadial}
                     dataKey="value"
                     innerRadius={70}
                     outerRadius={80}
