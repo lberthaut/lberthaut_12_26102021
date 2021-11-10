@@ -1,33 +1,79 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar} from 'recharts';
-import Usefetch from '../../services/api.js'
+import {BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Legend, Bar} from 'recharts';
 
 
 
-export default function Dailyactivities(userId){
-  userId=useParams().id;
+export default class Dailyactivities extends React.Component{
 
-/*   let {datasActivities}= Usefetch('${userId}/activity'); */
-
-  /* datasActivities.sessions.forEach((date) => {
-      let [mm, dd] = date.day.split('-');
-      date.name = `${dd}/${mm}`;
-    }); */
   
-
+  render(){
      return(
-       <div className="dailyactivitiesblock" key={userId}>
+       <div className="dailyactivitiesblock" key={'userId'}>
           <h2 className="dailyactivitiestitle">Activités quotidienne</h2>
-          <BarChart width={835} height={320} data= {'datasActivities'}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="day" />
-            <YAxis dataKey="kilogram" hide="true"/>
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="Poids (kg)" fill="#282D30" />
-            <Bar dataKey="Calories (kCal)" fill="#E60000" />
-        </BarChart>
+          <ResponsiveContainer>
+            <BarChart 
+            data={this.props.sessions} 
+            barGap={8} 
+            width={800} 
+            height={300}
+            >
+            <XAxis 
+            dataKey="name" 
+            stroke="grey" 
+            tickLine={false} 
+            dy={10}
+            />
+            <YAxis
+            yAxisId="poids"
+            domain={['dataMin -2', 'dataMax + 1']}
+            orientation="right"
+            axisLine={false}
+            tickLine={false}
+            dx={10}
+            dy={-4}
+            />
+            <YAxis
+              yAxisId="calories"
+              domain={['dataMin -20', 'dataMax + 20']}
+              orientation="left"
+              axisLine={false}
+              tickLine={false}
+              dx={-10}
+              dy={-4}
+            />
+            <Legend
+              width={'60%'}
+              iconType={'circle'}
+              iconSize={'.5rem'}
+              wrapperStyle={{
+                top: '-15%',
+                right: '1rem',
+                lineHeight: '40px',
+              }}
+            />
+            <CartesianGrid 
+            stroke="#ccc" 
+            vertical={false}
+            />
+            <Bar
+              yAxisId="calories"
+              name="Calories brûlées (kCal)"
+              dataKey="calories"
+              fill="black"
+              barSize={8}
+              radius={[50, 50, 0, 0]}
+            />
+            <Bar
+              yAxisId="poids"
+              name="Poids (kg)"
+              dataKey="kilogram"
+              fill="red"
+              barSize={8}
+              radius={[50, 50, 0, 0]}
+            />
+          </BarChart>
+      </ResponsiveContainer>
       </div>
      )
+     }
  }   

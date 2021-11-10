@@ -1,24 +1,34 @@
 import React from 'react';
-import {RadialBarChart, RadialBar, Legend, Tooltip} from 'recharts'
+import {ResponsiveContainer, PieChart, Pie, Cell} from 'recharts'
 
 export default class radialbar extends React.Component{
     render(){
-        const {datasRadial, id}= this.props;
+
         return(
-            <div className="radialbarblock" key={id}>
-                <RadialBarChart 
-                width={160} 
-                height={160} 
-                innerRadius="10%" 
-                outerRadius="80%" 
-                data={datasRadial} 
-                startAngle={360} 
-                endAngle={0}
+            <div className="radialbarblock" key={'id'}>
+              <ResponsiveContainer>
+                <PieChart 
+                width={730} 
+                height={250}
                 >
-                <RadialBar minAngle={15} label={{ fill: '#666', position: 'insideStart' }} background clockWise={true} dataKey='uv' />
-                <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' align="right" />
-                <Tooltip />
-                </RadialBarChart>
+                  <Pie
+                    data={this.props.todayScore}
+                    dataKey="value"
+                    innerRadius={70}
+                    outerRadius={80}
+                    startAngle={90}
+                    endAngle={450}
+                    fill="transparent"
+                    stroke="transparent"
+                    animationDuration={700}
+                  >
+                    <Cell 
+                    fill="red" 
+                    cornerRadius={50}
+                    />
+                  </Pie>
+                </PieChart>
+              </ResponsiveContainer>
             </div>
         )
     }

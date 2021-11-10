@@ -4,8 +4,15 @@ const Dailyactivitiesstyle = createGlobalStyle`
     .dailyactivitiesblock{
         position: relative;
         z-index: 10;
-        bottom: 880px;
+        bottom: 940px;
         left: 210px;
+        width: 800px;
+        height: 300px;
+    }
+
+    .dailyactivitiesblock>.recharts-responsive-container{
+        position: relative;
+        right: 60px;
     }
 
     .dailyactivitiestitle{

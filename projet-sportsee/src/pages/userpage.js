@@ -17,22 +17,50 @@ import Usefetch from '../services/api.js';
 export default class Userpage extends React.Component {
     constructor(props){
         super(props);
-        this.state={user:{
-            userInfos:{firstName:null},
-            keyData:{calorieCount:null,proteinCount:null, carbohydrateCount:null,lipidCount:null}
-        }}
-        console.log('test');
+        this.state={
+            user:{
+                todayScore:null,
+                userInfos:{firstName: null},
+                keyData:{calorieCount: null, proteinCount: null, carbohydrateCount: null, lipidCount: null}
+            },
+            userSessions:{
+                sessions:{day: null, sessionLength: null},
+            },
+            userActivity:{
+                sessions:{day: null, kilogram: null, calories: null}
+            },
+            userPerformance:{
+                kind:{1:null, 2:null, 3: null, 4:null, 5:null, 6:null},
+                data:{value:null, kind:null}
+            }
+        }
     }
     
     componentDidMount(){
         const urlId=this.props.match.params.id;
         Usefetch.getUser(urlId).then(data=>{
             this.setState({user:{
+                todayScore:data.todayScore,
                 userInfos:data.userInfos,
                 keyData:data.keyData,
             }})
         });
-        
+        Usefetch.getUserAverageSessions(urlId).then(data=>{
+            this.setState({userSessions:{
+                sessions:data.sessions
+            }})
+        });
+        Usefetch.getUserActivity(urlId).then(data=>{
+            this.setState({userActivity:{
+                sessions:data.sessions
+            }})
+        });
+        Usefetch.getUserPerformance(urlId).then(data=>{
+            this.setState({userPerformance:{
+                kind:data.kind,
+                data:data.data
+            }})
+        });
     }
     
     render(){
@@ -40,10 +68,10 @@ export default class Userpage extends React.Component {
         return(
             <Fragment>
                 <Hellobanner username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>
-                {/* <Dailyactivities datasActivities={'test'}/><Dailyactivitiesstyle/>
-                <Averagesessionstime datasSessionsTime={'test'}/><Averagesessionstimestyle/>
-                <Radargraph datasRadar={'test'} firstName={'test'}/><Radargraphstyle/>
-                <RadialBar datasRadial={'test'}/><Radialbarstyle/> */}
+                <Dailyactivities datasActivities={this.state.userActivity.sessions}/><Dailyactivitiesstyle/>
+                <Averagesessionstime datasSessionsTime={this.state.userSessions.sessions}/><Averagesessionstimestyle/>
+                <Radargraph datasRadar={this.state.userPerformance.kind} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
+                <RadialBar datasRadial={this.state.user.todayScore}/><Radialbarstyle/>
                 <Nutritionlayout keyData={this.state.user.keyData}/><Nutritionlayoutstyle/>
             </Fragment>
         )

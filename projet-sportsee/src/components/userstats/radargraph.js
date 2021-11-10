@@ -1,19 +1,33 @@
 import React from 'react';
-import {RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend} from 'recharts';
+import {RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Radar} from 'recharts';
 
 export default class Radargraph extends React.Component{
     render(){
-        const {datasRadar, firstName, id}= this.props;
 
         return(
-            <div className="radargraph" key={id}>
-                <RadarChart outerRadius={90} width={258} height={263} data={datasRadar}>
-                <PolarGrid />
-                <PolarAngleAxis dataKey="subject" />
-                <PolarRadiusAxis angle={30} domain={[0, 150]} />
-                <Radar name={firstName} dataKey="A" stroke="#FF0101B2" fill="#FF0101B2" fillOpacity={0.6} />
-                <Legend />
-                </RadarChart>
+            <div className="radargraph" key={'id'}>
+                <ResponsiveContainer>
+                    <RadarChart 
+                    outerRadius={90} 
+                    data={this.props.data}
+                    >
+                    <PolarGrid 
+                    radialLines={false} 
+                    />
+                    <PolarAngleAxis
+                        dataKey="kind"
+                        domain={[0, 150]}
+                        dy={5}
+                        tickLine={false}
+                        stroke="white"
+                    />
+                    <Radar dataKey="value" 
+                    name=" " 
+                    fill="red" 
+                    fillOpacity={0.7}
+                    />
+                    </RadarChart>
+          </ResponsiveContainer>
             </div>
         )
     }

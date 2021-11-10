@@ -7,6 +7,8 @@ const Averagesessionstimestyle = createGlobalStyle`
         left: 215px;
         background-color: red;
         border-radius: 5px;
+        width: 258px;
+        height: 263px;
     }
 
     .opacityblock{
@@ -16,7 +18,7 @@ const Averagesessionstimestyle = createGlobalStyle`
         background-color: black;
         position: absolute;
         top: 590px;
-        left: 390px;
+        left: 395px;
         border-radius: 0px 5px 5px 0px;
     }
 `
