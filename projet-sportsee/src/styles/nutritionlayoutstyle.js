@@ -45,6 +45,8 @@ const Nutritionlayoutstyle = createGlobalStyle`
         display: flex;
         flex-direction: row;
         height: 60px;
+        background-color: #FBFBFB;
+        padding: 25px;
     }
 
     .nutritioninfos{
@@ -56,11 +58,15 @@ const Nutritionlayoutstyle = createGlobalStyle`
         font-weight: bold;
         margin-top: 6px;
         margin-bottom: 4px;
+        font-size: 20px;
+        padding-left: 5px;
     }
 
     .datasname{
         margin: 0;
         color: #74798c;
+        font-size: 14px;
+        padding-left: 5px;
     }
 `
 

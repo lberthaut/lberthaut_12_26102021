@@ -10,7 +10,7 @@ export default class Dailyactivities extends React.Component{
      return(
        <div className="dailyactivitiesblock" key={'userId'}>
           <h2 className="dailyactivitiestitle">Activités quotidienne</h2>
-          <ResponsiveContainer>
+          <ResponsiveContainer height="80%" >
             <BarChart 
             data={this.props.datasActivities} 
             barGap={8} 

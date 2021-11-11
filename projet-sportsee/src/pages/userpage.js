@@ -19,8 +19,10 @@ export default class Userpage extends React.Component {
         super(props);
         this.state={
             user:{
-                userInfos:{firstName: null, score: null, todayScore: null},
-                keyData:{calorieCount: null, proteinCount: null, carbohydrateCount: null, lipidCount: null}
+                userInfos:{firstName: null},
+                keyData:{calorieCount: null, proteinCount: null, carbohydrateCount: null, lipidCount: null},
+                score: null, 
+                todayScore: null
             },
             userSessions:{
                 sessions:{day: null, sessionLength: null},
@@ -41,6 +43,8 @@ export default class Userpage extends React.Component {
             this.setState({user:{
                 userInfos:data.userInfos,
                 keyData:data.keyData,
+                score:data.score,
+                todayScore:data.todayScore
             }})
         });
         Usefetch.getUserAverageSessions(urlId).then(data=>{
@@ -69,7 +73,7 @@ export default class Userpage extends React.Component {
                 <Dailyactivities datasActivities={this.state.userActivity.sessions}/><Dailyactivitiesstyle/>
                 <Averagesessionstime datasSessionsTime={this.state.userSessions.sessions}/><Averagesessionstimestyle/>
                 <Radargraph datasRadar={this.state.userPerformance.kind} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
-                <RadialBar datasRadial={this.state.user.userInfos.todayScore}/><Radialbarstyle/>
+                <RadialBar datasRadial={this.state.user.score}/><Radialbarstyle/>
                 <Nutritionlayout keyData={this.state.user.keyData}/><Nutritionlayoutstyle/>
             </Fragment>
         )

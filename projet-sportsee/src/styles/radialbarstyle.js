@@ -2,7 +2,7 @@ import {createGlobalStyle} from "styled-components";
 
 const Radialbarstyle = createGlobalStyle`
     .radialbarblock{
-        background-color: purple;
+        ${'' /* background-color: purple; */}
         position: absolute;
         margin: 0;
         width: 258px;

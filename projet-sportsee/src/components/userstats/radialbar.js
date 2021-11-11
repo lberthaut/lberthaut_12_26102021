@@ -1,18 +1,22 @@
 import React from 'react';
-import {ResponsiveContainer, PieChart, Pie, Cell} from 'recharts'
+import {ResponsiveContainer, PieChart, Pie, Cell, } from 'recharts'
 
 export default class radialbar extends React.Component{
-    render(){
+  render(){
+    const dataPie=[{"name": "Score", "value":this.props.datasRadial}, {"name":"", value:1-this.props.datasRadial}]
+    const scoreContent= 100*this.props.datasRadial;
 
         return(
+          
             <div className="radialbarblock" key={'id'}>
+            <h2 className="scoretitle">Score</h2>
               <ResponsiveContainer>
                 <PieChart 
                 width={730} 
                 height={250}
                 >
                   <Pie
-                    data={this.props.datasRadial}
+                    data={dataPie}
                     dataKey="value"
                     innerRadius={70}
                     outerRadius={80}
@@ -29,6 +33,10 @@ export default class radialbar extends React.Component{
                   </Pie>
                 </PieChart>
               </ResponsiveContainer>
+              <div className="scoreobjectiveblock">
+                <p className="scorecontent">{scoreContent}%</p>
+                <p className="scoreobjective"> de votre objectif</p>
+              </div>
             </div>
         )
     }
