@@ -6,7 +6,7 @@ const Dailyactivitiesstyle = createGlobalStyle`
         z-index: 10;
         bottom: 940px;
         left: 210px;
-        width: 800px;
+        width: 830px;
         height: 400px;
         background-color: #FBFBFB;
     }
@@ -14,6 +14,7 @@ const Dailyactivitiesstyle = createGlobalStyle`
     .dailyactivitiesblock>.recharts-responsive-container{
         position: relative;
         top: 40px;
+        left: 30px;
     }
 
     .dailyactivitiestitle{
@@ -26,6 +27,22 @@ const Dailyactivitiesstyle = createGlobalStyle`
         position: relative;
         bottom: 35px;
         left: 110px;
+    }
+
+    .custom-tooltip{
+        background-color: red;
+        color: white;
+        list-style-type: none;
+        height: 80px;
+        width: 40px;
+        padding: 0;
+        text-align:center;
+    }
+
+    .tooltipdatas{
+        display: inline-block;
+        font-size: 9px;
+        margin-top: 18px;
     }
 `
 

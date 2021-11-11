@@ -1,5 +1,5 @@
 import React from 'react';
-import {BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Legend, Bar} from 'recharts';
+import {BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Legend, Bar, Tooltip}  from 'recharts';
 
 
 
@@ -10,7 +10,7 @@ export default class Dailyactivities extends React.Component{
      return(
        <div className="dailyactivitiesblock" key={'userId'}>
           <h2 className="dailyactivitiestitle">Activités quotidienne</h2>
-          <ResponsiveContainer height="80%" >
+          <ResponsiveContainer height="80%" width="95%">
             <BarChart 
             data={this.props.datasActivities} 
             barGap={8} 
@@ -38,9 +38,11 @@ export default class Dailyactivities extends React.Component{
               orientation="left"
               axisLine={false}
               tickLine={false}
+              hide={true}
               dx={-10}
               dy={-4}
             />
+            <Tooltip wrapperStyle={{ width: 130 }} content={<CustomTooltip />} />
             <Legend
               width={'60%'}
               iconType={'circle'}
@@ -56,17 +58,17 @@ export default class Dailyactivities extends React.Component{
             vertical={false}
             />
             <Bar
-              yAxisId="calories"
-              name="Calories brûlées (kCal)"
-              dataKey="calories"
+              yAxisId="poids"
+              name="Poids (kg)"
+              dataKey="kilogram"
               fill="black"
               barSize={8}
               radius={[50, 50, 0, 0]}
             />
             <Bar
-              yAxisId="poids"
-              name="Poids (kg)"
-              dataKey="kilogram"
+              yAxisId="calories"
+              name="Calories brûlées (kCal)"
+              dataKey="calories"
               fill="red"
               barSize={8}
               radius={[50, 50, 0, 0]}
@@ -77,3 +79,12 @@ export default class Dailyactivities extends React.Component{
      )
      }
  }   
+
+ function CustomTooltip({ active, payload }) {
+  return active && payload ? (
+    <ul className="custom-tooltip">
+      <li className="tooltipdatas">{`${payload[1].value}kg`}</li>
+      <li className="tooltipdatas">{`${payload[0].value}kCal`}</li>
+    </ul>
+  ) : null;
+}
