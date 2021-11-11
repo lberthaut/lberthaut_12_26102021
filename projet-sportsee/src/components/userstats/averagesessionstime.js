@@ -1,70 +1,65 @@
 import React from 'react';
-import {LineChart, ResponsiveContainer, XAxis, YAxis, Line, CartesianGrid, Tooltip, Legend} from 'recharts'
+import {LineChart, ResponsiveContainer, XAxis, YAxis, Line, Tooltip} from 'recharts'
 
 
 export default class Averagesessionstime extends React.Component{
-    
+
     render(){
         return(
             <div className="graphsessionstimeblock" key={'userId'}>
-            <div className="graphaveragetime">
-            <ResponsiveContainer>
-                <LineChart 
-                width={730} 
-                height={250} 
-                data={this.props.datasSessionsTime}
-                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                >
-                <CartesianGrid 
-                strokeDasharray="3 3" 
-                />
-                <XAxis 
-                dataKey="day" 
-                />
-                <YAxis 
-                dataKey="sessionLength"
-                />
-                <Tooltip />
-                <Legend />
-                <Line 
-                type="monotone" 
-                dataKey="sessionLength" 
-                stroke="#8884d8" 
-                />
-                </LineChart>
-
-                {/* <LineChart
-                margin={{ top: 0, right: 20, left: 20, bottom: 20 }}
-                data={this.props.sessions}
-                >
-                <XAxis
-                    dataKey="day"
+                <div className="graphaveragetime">
+                <ResponsiveContainer>
+                    <LineChart 
+                    width={258} 
+                    height={263} 
+                    data={this.props.datasSessionsTime}
+                    margin={{ top: 100, bottom: 10 }}
+                    >
+                    <XAxis 
+                    dataKey="day" 
                     stroke="rgba(255, 255, 255, 0.6)"
                     tickLine={false}
                     dy={10}
-                />
-                <YAxis
-                    dataKey="sessionLength"
-                    stroke="rgba(255, 255, 255, 0.6)"
+                    tick={false}
                     hide={true}
-                    domain={[0, 'dataMax + 75']}
-                />
-                <Line
+                    />
+                    <YAxis 
                     dataKey="sessionLength"
-                    type="monotone"
+                    hide={true}
+                    />
+                    <Tooltip
+                    content={<CustomTooltip />}
+                    cursor={{ stroke: 'rgba(255,255,255, 0.6)' }}
+                    />
+                    <Line 
+                    type="natural" 
+                    dataKey="sessionLength" 
                     stroke="rgba(255, 255, 255, 0.6)"
                     strokeWidth={2}
                     dot={false}
-                    activeDot={{
-                    stroke: 'rgba(255,255,255, 0.6)',
-                    strokeWidth: 10,
-                    r: 5,
-                    }}
-                />
-                </LineChart> */}
-            </ResponsiveContainer>
-            </div>
-            <div className="opacityblock"></div>
+                    />
+                    </LineChart>
+                </ResponsiveContainer>
+                </div>
+                <div className="opacityblock"></div>
+                <div className="days"><p>L</p><p>M</p><p>M</p><p>J</p><p>V</p><p>S</p><p>D</p></div>
+                <p className="titlegraph">Durée moyenne des sessions</p>
             </div>
         )
 }}
+
+function CustomTooltip({ active, payload }) {
+    if (active && payload) {
+      return (
+        <span className="tooltipaveragesession">{`${payload[0].value} min`}</span>
+      );
+    }
+    return null;
+  }
+  
+ /*  function Weeklydays(){
+      const days= ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+        let daysBlock=document.getElementsByClassName('days');
+      days.forEach(e => 
+       daysBlock.innerHTML=`<p>${e}</p>`)
+  } */
