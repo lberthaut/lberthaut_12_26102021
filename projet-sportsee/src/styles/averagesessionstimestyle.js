@@ -27,7 +27,7 @@ const Averagesessionstimestyle = createGlobalStyle`
         flex-direction: row;
         justify-content: space-between;
         position: absolute;
-        top: 930px;
+        top: 940px;
         left: 228px;
         &>p{
             color: white;

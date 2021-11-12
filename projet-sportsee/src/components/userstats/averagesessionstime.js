@@ -13,7 +13,7 @@ export default class Averagesessionstime extends React.Component{
                     width={258} 
                     height={263} 
                     data={this.props.datasSessionsTime}
-                    margin={{ top: 100, bottom: 10 }}
+                    margin={{ top: 100, bottom: 50 }}
                     >
                     <XAxis 
                     dataKey="day" 

@@ -35,6 +35,7 @@ export default class Userpage extends React.Component {
                 data:{value:null, kind:null}
             }
         }
+        
     }
     
     componentDidMount(){
@@ -64,16 +65,22 @@ export default class Userpage extends React.Component {
             }})
         });
     }
+
+    
     
     render(){
-
+        let datasScore=this.state.user.score
+    if(datasScore===undefined){
+        datasScore=this.state.user.todayScore
+    }
+    
         return(
             <Fragment>
                 <Hellobanner username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>
                 <Dailyactivities datasActivities={this.state.userActivity.sessions}/><Dailyactivitiesstyle/>
                 <Averagesessionstime datasSessionsTime={this.state.userSessions.sessions}/><Averagesessionstimestyle/>
                 <Radargraph datasRadar={this.state.userPerformance.kind} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
-                <RadialBar datasRadial={this.state.user.score}/><Radialbarstyle/>
+                <RadialBar datasRadial={datasScore}/><Radialbarstyle/>
                 <Nutritionlayout keyData={this.state.user.keyData}/><Nutritionlayoutstyle/>
             </Fragment>
         )

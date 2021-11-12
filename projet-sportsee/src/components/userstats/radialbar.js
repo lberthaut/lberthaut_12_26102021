@@ -12,8 +12,9 @@ export default class radialbar extends React.Component{
             <h2 className="scoretitle">Score</h2>
               <ResponsiveContainer>
                 <PieChart 
-                width={730} 
-                height={250}
+                width={258} 
+                height={263}
+                margin={{ top: 50, bottom: 50 }}
                 >
                   <Pie
                     data={dataPie}
