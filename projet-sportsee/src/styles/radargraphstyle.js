@@ -1,9 +1,9 @@
 import {createGlobalStyle} from "styled-components";
 
 const Radargraphstyle = createGlobalStyle`
-    .radargraph{
+    .radargraphblock{
         position: absolute;
-        top: 590px;
+        top: 720px;
         left: 500px;
         background-color: #282D30;
         color: white;

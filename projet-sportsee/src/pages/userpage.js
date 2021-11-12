@@ -69,17 +69,23 @@ export default class Userpage extends React.Component {
     
     
     render(){
-        let datasScore=this.state.user.score
+        let datasScore=this.state.user.score;
     if(datasScore===undefined){
-        datasScore=this.state.user.todayScore
+        datasScore=this.state.user.todayScore;
     }
+
+    /* let datasPerformances=this.state.userPerformance.data;
+        var regex = new regex("^[0-9]+$")
+        datasPerformances.forEach(e =>{
+            this.state.userPerformance.data.kind.split(regex).join(this.state.userPerformance.kind)
+        } ) */
     
         return(
             <Fragment>
                 <Hellobanner username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>
                 <Dailyactivities datasActivities={this.state.userActivity.sessions}/><Dailyactivitiesstyle/>
                 <Averagesessionstime datasSessionsTime={this.state.userSessions.sessions}/><Averagesessionstimestyle/>
-                <Radargraph datasRadar={this.state.userPerformance.kind} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
+                <Radargraph datasRadar={this.state.userPerformance.data} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
                 <RadialBar datasRadial={datasScore}/><Radialbarstyle/>
                 <Nutritionlayout keyData={this.state.user.keyData}/><Nutritionlayoutstyle/>
             </Fragment>

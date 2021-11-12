@@ -40,7 +40,7 @@ const Layoutstyle = createGlobalStyle`
 }
 
 .iconsbar{
-    height: 40%;
+    height: 35%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

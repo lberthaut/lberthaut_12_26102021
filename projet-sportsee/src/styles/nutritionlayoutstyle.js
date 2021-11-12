@@ -3,12 +3,12 @@ import {createGlobalStyle} from "styled-components";
 const Nutritionlayoutstyle = createGlobalStyle`
     .nutritionlayoutblock{
         width: 258px;
-        height: 600px;
+        height: 693px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: absolute;
-        top: 250px;
+        top: 290px;
         left: 1100px;
     }
     

@@ -9,6 +9,7 @@ const Radialbarstyle = createGlobalStyle`
         height: 263px;
         top: 720px;
         left: 785px;
+        border-radius: 5px;
     }
 
     .scoretitle{
@@ -34,6 +35,7 @@ const Radialbarstyle = createGlobalStyle`
         width: 60px;
         text-align: center;
         margin: 0;
+        opacity: 0.6
     }
 
     .scoreobjectiveblock{

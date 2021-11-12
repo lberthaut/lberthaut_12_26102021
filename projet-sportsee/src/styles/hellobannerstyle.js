@@ -3,8 +3,9 @@ import {createGlobalStyle} from "styled-components";
 const Hellobannerstyle = createGlobalStyle`
     .banner{
         position: relative;
-        bottom: 960px;
+        bottom: 980px;
         left: 215px;
+        width: 1024px;
     }
 
     .titlebanner{
@@ -21,6 +22,7 @@ const Hellobannerstyle = createGlobalStyle`
         font-size: 48px;
         color: red;
         margin: 0;
+        font-weight: bold;
     }
 `
 
