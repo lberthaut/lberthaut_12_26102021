@@ -74,6 +74,16 @@ export default class Userpage extends React.Component {
         datasScore=this.state.user.todayScore;
     }
 
+/*     const datasPerformances= this.state.userPerformance.data;
+    const kindPerformances= this.state.userPerformance.kind;
+    const returnedPerformances=Object.assign(datasPerformances, kindPerformances);
+
+    console.log(returnedPerformances);
+
+    for(let i=0; i<datasPerformances; i++){
+        
+    } */
+
     /* let datasPerformances=this.state.userPerformance.data;
         var regex = new regex("^[0-9]+$")
         datasPerformances.forEach(e =>{
