@@ -1,7 +1,7 @@
 # Projet Sportsee
 
 ## OpenClassrooms training project 12/14
----
+
 
 
 **Goal**
@@ -14,7 +14,7 @@ Display users' datas in forms of charts
 
 
 ## Skills
----
+
 
 
 * Recover datas from API
@@ -28,7 +28,7 @@ Display users' datas in forms of charts
 * Write the Readme
 
 ## Resources provided
----
+
 * [Sketch Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
 
 * [Kanban](https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e)
@@ -36,7 +36,7 @@ Display users' datas in forms of charts
 * [Back-end](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
 ## Library
----
+
 
 ```
 REACT
@@ -45,7 +45,7 @@ RECHARTS
 ```
 
 ## Installation
----
+
 
 **Recommanded IDE**
 
@@ -61,7 +61,7 @@ RECHARTS
 
 
 ## 1 - Installing and Starting Server
----
+
 
 * Clone the Back-end Repository : ``https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard``
 
@@ -69,7 +69,7 @@ RECHARTS
 
 
 ## 2 - Installing et starting Front-end
----
+
 
 * Clone the repository: ``https://github.com/lberthaut/lberthaut_12_26102021.git``
 
@@ -78,7 +78,7 @@ RECHARTS
 * Start the project on port 3001: ``npm start``
 
 ## 3 - Browse to the website with differents datas
----
+
 
 * Website page has built at ``http://localhost:3001``
 
