@@ -8,7 +8,7 @@ export default class Dailyactivities extends React.Component{
   
   render(){
      return(
-       <div className="dailyactivitiesblock" key={'userId'}>
+       <div className="dailyactivitiesblock" key={this.props.dataKey}>
           <h2 className="dailyactivitiestitle">Activités quotidienne</h2>
           <ResponsiveContainer height="80%" width="95%">
             <BarChart 

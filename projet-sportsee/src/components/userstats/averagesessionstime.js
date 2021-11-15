@@ -6,7 +6,7 @@ export default class Averagesessionstime extends React.Component{
 
     render(){
         return(
-            <div className="graphsessionstimeblock" key={'userId'}>
+            <div className="graphsessionstimeblock" key={this.props.dataKey}>
                 <div className="graphaveragetime">
                 <ResponsiveContainer>
                     <LineChart 

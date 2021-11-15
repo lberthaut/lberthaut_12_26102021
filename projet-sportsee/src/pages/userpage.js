@@ -19,6 +19,7 @@ export default class Userpage extends React.Component {
         super(props);
         this.state={
             user:{
+                id:null,
                 userInfos:{firstName: null},
                 keyData:{calorieCount: null, proteinCount: null, carbohydrateCount: null, lipidCount: null},
                 score: null, 
@@ -42,6 +43,7 @@ export default class Userpage extends React.Component {
         const urlId=this.props.match.params.id;
         Usefetch.getUser(urlId).then(data=>{
             this.setState({user:{
+                id:data.id,
                 userInfos:data.userInfos,
                 keyData:data.keyData,
                 score:data.score,
@@ -70,34 +72,26 @@ export default class Userpage extends React.Component {
     
     render(){
         let datasScore=this.state.user.score;
-    if(datasScore===undefined){
-        datasScore=this.state.user.todayScore;
-    }
+        if(datasScore===undefined){
+            datasScore=this.state.user.todayScore;
+        }
 
 /*     const datasPerformances= this.state.userPerformance.data;
     const kindPerformances= this.state.userPerformance.kind;
-    const returnedPerformances=Object.assign(datasPerformances, kindPerformances);
-
-    console.log(returnedPerformances);
 
     for(let i=0; i<datasPerformances; i++){
-        
+
     } */
 
-    /* let datasPerformances=this.state.userPerformance.data;
-        var regex = new regex("^[0-9]+$")
-        datasPerformances.forEach(e =>{
-            this.state.userPerformance.data.kind.split(regex).join(this.state.userPerformance.kind)
-        } ) */
     
         return(
             <Fragment>
-                <Hellobanner username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>
-                <Dailyactivities datasActivities={this.state.userActivity.sessions}/><Dailyactivitiesstyle/>
-                <Averagesessionstime datasSessionsTime={this.state.userSessions.sessions}/><Averagesessionstimestyle/>
-                <Radargraph datasRadar={this.state.userPerformance.data} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
-                <RadialBar datasRadial={datasScore}/><Radialbarstyle/>
-                <Nutritionlayout keyData={this.state.user.keyData}/><Nutritionlayoutstyle/>
+                <Hellobanner  username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>
+                <Dailyactivities dataKey={this.state.user.id} datasActivities={this.state.userActivity.sessions}/><Dailyactivitiesstyle/>
+                <Averagesessionstime dataKey={this.state.user.id} datasSessionsTime={this.state.userSessions.sessions}/><Averagesessionstimestyle/>
+                <Radargraph dataKey={this.state.user.id} datasRadar={this.state.userPerformance.data} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
+                <RadialBar dataKey={this.state.user.id} datasRadial={datasScore}/><Radialbarstyle/>
+                <Nutritionlayout dataKey={this.state.user.id} keyData={this.state.user.keyData}/><Nutritionlayoutstyle/>
             </Fragment>
         )
     }

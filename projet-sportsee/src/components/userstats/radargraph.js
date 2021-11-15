@@ -5,7 +5,7 @@ export default class Radargraph extends React.Component{
     render(){
 
         return(
-            <div className="radargraphblock" key={'id'}>
+            <div className="radargraphblock"  key={this.props.dataKey}>
                 <ResponsiveContainer>
                     <RadarChart 
                     outerRadius={90} 

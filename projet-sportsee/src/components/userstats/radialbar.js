@@ -8,7 +8,7 @@ export default class radialbar extends React.Component{
 
         return(
           
-            <div className="radialbarblock" key={'id'}>
+            <div className="radialbarblock"  key={this.props.dataKey}>
             <h2 className="scoretitle">Score</h2>
               <ResponsiveContainer>
                 <PieChart 
