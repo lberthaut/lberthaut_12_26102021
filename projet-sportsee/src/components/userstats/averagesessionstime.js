@@ -41,7 +41,6 @@ export default class Averagesessionstime extends React.Component{
                     </LineChart>
                 </ResponsiveContainer>
                 </div>
-                <div className="opacityblock"></div>
                 <div className="days"><p>L</p><p>M</p><p>M</p><p>J</p><p>V</p><p>S</p><p>D</p></div>
                 <p className="titlegraph">Durée moyenne des sessions</p>
             </div>

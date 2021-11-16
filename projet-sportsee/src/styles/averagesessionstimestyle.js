@@ -32,7 +32,7 @@ const Averagesessionstimestyle = createGlobalStyle`
         &>p{
             color: white;
             font-size: 12px;
-            opacity: 0.8
+            opacity: 0.6
         }
     }
 
@@ -45,18 +45,6 @@ const Averagesessionstimestyle = createGlobalStyle`
         width: 140px;
         line-height: 24px;
         font-size: 15px;
-    }
-
-    .opacityblock{
-        opacity: 0.1;
-        width: 79px;
-        height: 263px;
-        background-color: black;
-        position: absolute;
-        top: 590px;
-        left: 395px;
-        border-radius: 0px 5px 5px 0px;
-        display: none;
     }
 `
 

@@ -65,6 +65,8 @@ RECHARTS
 
 * Clone the Back-end Repository : ``https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git``
 
+* Download and install [NodeJS](https://nodejs.org/en/)
+
 * With a terminal, start Back-end on port 3000: ``npm start``
 
 
@@ -72,6 +74,16 @@ RECHARTS
 
 
 * Clone the repository: ``https://github.com/lberthaut/lberthaut_12_26102021.git``
+
+* With a terminal, install with npm:
+
+    1. React: ``npm create-react-app``
+
+    2. React Router: ``nom add react-router-dom``
+
+    3. Prop-Types: ``npm add prop-types``
+
+    4. Styles-Components: ``npm add styled-components``
 
 * With a terminal, move to this folder: ``cd projet-sportsee``
 
