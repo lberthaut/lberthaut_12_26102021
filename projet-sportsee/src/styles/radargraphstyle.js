@@ -13,9 +13,9 @@ const Radargraphstyle = createGlobalStyle`
         height: 263px; 
     }
 
-${'' /*     .legend-item-0{
-        visibility: hidden;
-    } */}
+    .radargraphblock tspan{
+        font-size: 9.5px;
+    }
 `
 
 export default Radargraphstyle;

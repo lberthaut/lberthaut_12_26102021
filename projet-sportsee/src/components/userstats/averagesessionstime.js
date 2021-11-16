@@ -56,10 +56,3 @@ function CustomTooltip({ active, payload }) {
     }
     return null;
   }
-  
- /*  function Weeklydays(){
-      const days= ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
-        let daysBlock=document.getElementsByClassName('days');
-      days.forEach(e => 
-       daysBlock.innerHTML=`<p>${e}</p>`)
-  } */

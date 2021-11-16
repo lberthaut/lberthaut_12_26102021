@@ -61,6 +61,7 @@ export default class Userpage extends React.Component {
             }})
         });
         Usefetch.getUserPerformance(urlId).then(data=>{
+            data.data.forEach(value=> value.kind= data.kind[value.kind]);
             this.setState({userPerformance:{
                 kind:data.kind,
                 data:data.data
@@ -75,13 +76,6 @@ export default class Userpage extends React.Component {
         if(datasScore===undefined){
             datasScore=this.state.user.todayScore;
         }
-
-/*     const datasPerformances= this.state.userPerformance.data;
-    const kindPerformances= this.state.userPerformance.kind;
-
-    for(let i=0; i<datasPerformances; i++){
-
-    } */
 
     
         return(
