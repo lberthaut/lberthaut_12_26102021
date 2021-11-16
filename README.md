@@ -63,7 +63,7 @@ RECHARTS
 ## 1 - Installing and Starting Server
 
 
-* Clone the Back-end Repository : ``https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard``
+* Clone the Back-end Repository : ``https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git``
 
 * With a terminal, start Back-end on port 3000: ``npm start``
 
