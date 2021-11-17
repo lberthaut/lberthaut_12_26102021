@@ -1,5 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
+/**
+ * Stylising the component
+ * 
+ * @const
+ * @this {Radargraphstyle}
+ */
+
 const Radargraphstyle = createGlobalStyle`
     .radargraphblock{
         position: absolute;

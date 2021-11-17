@@ -1,5 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
+  /**
+ * Stylising the component
+ * 
+ * @const
+ * @this {Dailyactivitiesstyle}
+ */
+
 const Dailyactivitiesstyle = createGlobalStyle`
     .dailyactivitiesblock{
         position: relative;

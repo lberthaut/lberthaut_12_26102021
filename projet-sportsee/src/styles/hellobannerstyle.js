@@ -1,5 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
+  /**
+ * Stylising the component
+ * 
+ * @const
+ * @this {Hellobannerstyle}
+ */
+
 const Hellobannerstyle = createGlobalStyle`
     .banner{
         position: relative;

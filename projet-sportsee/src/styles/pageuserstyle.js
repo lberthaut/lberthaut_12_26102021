@@ -1,5 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
+/**
+ * Stylising the component
+ * 
+ * @const
+ * @this {Pageuserstyle}
+ */
+
 const Pageuserstyle = createGlobalStyle`
 body{
     margin: 0;

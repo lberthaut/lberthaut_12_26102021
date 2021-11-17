@@ -13,6 +13,14 @@ import Nutritionlayout from '../components/userstats/nutrition.js'
 import Nutritionlayoutstyle from '../styles/nutritionlayoutstyle.js';
 import Usefetch from '../services/api.js';
 
+/**
+ * Create a graph of Average session time of sport
+ * 
+ * @class
+ * @this {Userpage}
+ * @param {dataKey} datakey of the user
+ * @param {this.props.datasSessionsTime} sport's data of the user per session of sport
+ */
 
 export default class Userpage extends React.Component {
     constructor(props){

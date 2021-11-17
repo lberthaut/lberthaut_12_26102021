@@ -4,6 +4,14 @@ import swim from '../../assets/swim.png'
 import bike from '../../assets/biking.png'
 import bodybuilding from '../../assets/dumbbell.png'
 
+/**
+ * Create vertical menu layout
+ * 
+ * @class
+ * @this {Verticallayouts}
+ * @param {pics} pics for different buttons
+ */
+
 export default class Verticallayouts extends React.Component {
     render (){
         return(

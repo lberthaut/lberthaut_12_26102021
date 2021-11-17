@@ -1,5 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
+  /**
+ * Stylising the component
+ * 
+ * @const
+ * @this {Nutritionlayoutstyle}
+ */
+
 const Nutritionlayoutstyle = createGlobalStyle`
     .nutritionlayoutblock{
         width: 258px;

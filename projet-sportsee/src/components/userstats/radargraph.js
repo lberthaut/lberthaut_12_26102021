@@ -2,6 +2,15 @@ import React from 'react';
 import {RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Radar} from 'recharts';
 import propTypes from 'prop-types';
 
+/**
+ * Create a graph sport's kind of the user
+ * 
+ * @class
+ * @this {Radargraph}
+ * @param {dataKey} datakey of the user
+ * @param {this.props.datasRadar} sport's data of the user splited to different kinds
+ */
+
 export default class Radargraph extends React.Component{
     render(){
 
@@ -33,6 +42,14 @@ export default class Radargraph extends React.Component{
         )
     }
 }
+
+  /**
+ * Check the types of the datas
+ * 
+ * @Property
+ * @this {propTypes}
+ */
+
 
 Radargraph.propTypes={
     datasSessionsTime: propTypes.oneOfType([

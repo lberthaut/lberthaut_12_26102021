@@ -1,3 +1,11 @@
+/**
+ * fetch users' datas from an URL
+ * 
+ * @class
+ * @this {Usefetch}
+ * @param {URL} URLs of the users' datas
+ */
+
 export default class Usefetch {
  
 

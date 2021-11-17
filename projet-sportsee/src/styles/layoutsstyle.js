@@ -1,5 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
+  /**
+ * Stylising the component
+ * 
+ * @const
+ * @this {Layoutstyle}
+ */
+
 const Layoutstyle = createGlobalStyle`
 .horizontallayout{
     background-color: black;

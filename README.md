@@ -42,6 +42,7 @@ Display users' datas in forms of charts
 REACT
 REACT-ROUTER-DOM
 RECHARTS
+STYLED-COMPONENTS
 ```
 
 ## Installation

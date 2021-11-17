@@ -3,6 +3,15 @@ import {LineChart, ResponsiveContainer, XAxis, YAxis, Line, Tooltip} from 'recha
 import propTypes from 'prop-types';
 
 
+/**
+ * Create a graph of Average session time of sport
+ * 
+ * @class
+ * @this {Averagesessionstime}
+ * @param {dataKey} datakey of the user
+ * @param {this.props.datasSessionsTime} sport's data of the user per session of sport
+ */
+
 export default class Averagesessionstime extends React.Component{
 
     render(){
@@ -48,6 +57,14 @@ export default class Averagesessionstime extends React.Component{
         )
 }}
 
+/**
+ * Create a span, when mouse flyover graph
+ * 
+ * @function
+ * @this {CustomTooltip}
+ * @param {payload} The source data of the content to be displayed
+ * @param {active} Display the tooltip
+ */
 
 function CustomTooltip({ active, payload }) {
     if (active && payload) {
@@ -58,7 +75,13 @@ function CustomTooltip({ active, payload }) {
     return null;
   }
 
-  
+  /**
+ * Check the types of the datas
+ * 
+ * @Property
+ * @this {propTypes}
+ */
+
 Averagesessionstime.propTypes={
   datasSessionsTime: propTypes.oneOfType([
     propTypes.array,

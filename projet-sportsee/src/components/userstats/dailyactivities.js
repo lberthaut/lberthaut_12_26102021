@@ -2,6 +2,14 @@ import React from 'react';
 import {BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Legend, Bar, Tooltip}  from 'recharts';
 import propTypes from 'prop-types';
 
+/**
+ * Create a graph of daily sport's activity
+ * 
+ * @class
+ * @this {Dailyactivities}
+ * @param {dataKey} datakey of the user
+ * @param {this.props.datasActivities} sport's data of the user per day
+ */
 
 export default class Dailyactivities extends React.Component{
 
@@ -65,7 +73,7 @@ export default class Dailyactivities extends React.Component{
               barSize={8}
               radius={[50, 50, 0, 0]}
             />
-            <Bar
+                        <Bar
               yAxisId="calories"
               name="Calories brûlées (kCal)"
               dataKey="calories"
@@ -80,14 +88,30 @@ export default class Dailyactivities extends React.Component{
      }
  }   
 
+ /**
+ * Create a span, when mouse flyover graph
+ * 
+ * @function
+ * @this {CustomTooltip}
+ * @param {payload} The source data of the content to be displayed
+ * @param {active} Display the tooltip
+ */
+
  function CustomTooltip({ active, payload }) {
   return active && payload ? (
     <ul className="custom-tooltip">
-      <li className="tooltipdatas">{`${payload[1].value}kg`}</li>
-      <li className="tooltipdatas">{`${payload[0].value}kCal`}</li>
+      <li className="tooltipdatas">{`${payload[0].value}kg`}</li>
+      <li className="tooltipdatas">{`${payload[1].value}kCal`}</li>
     </ul>
   ) : null;
 }
+
+  /**
+ * Check the types of the datas
+ * 
+ * @Property
+ * @this {propTypes}
+ */
 
 
 Dailyactivities.propTypes={

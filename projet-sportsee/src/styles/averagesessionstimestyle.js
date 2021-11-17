@@ -1,5 +1,13 @@
 import {createGlobalStyle} from "styled-components";
 
+  /**
+ * Stylising the component
+ * 
+ * @const
+ * @this {Averagesessionstimestyle}
+ */
+
+
 const Averagesessionstimestyle = createGlobalStyle`
     .graphaveragetime{
         position: absolute;

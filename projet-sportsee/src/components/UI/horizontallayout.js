@@ -2,6 +2,14 @@ import React from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import logo from '../../assets/logo.png'
 
+/**
+ * Create horizontal menu layout
+ * 
+ * @class
+ * @this {Horizontallayout}
+ * @param {logo} logo du site
+ */
+
 export default class Horizontallayout extends React.Component{
     render(){
         return(

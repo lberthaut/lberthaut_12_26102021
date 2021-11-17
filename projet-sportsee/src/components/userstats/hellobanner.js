@@ -1,6 +1,14 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
+/**
+ * Create a banner with the name of the user
+ * 
+ * @class
+ * @this {Hellobanner}
+ * @param {id} datakey of the user
+ * @param {username} name of the user
+ */
 
 export default class Hellobanner extends React.Component{
     render(){
@@ -16,6 +24,14 @@ export default class Hellobanner extends React.Component{
         )
     }
 }
+
+  /**
+ * Check the types of the datas
+ * 
+ * @Property
+ * @this {propTypes}
+ */
+
 
 Hellobanner.propTypes={
     username:propTypes.string,

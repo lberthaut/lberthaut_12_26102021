@@ -1,5 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
+/**
+ * Stylising the component
+ * 
+ * @const
+ * @this {Radialbarstyle}
+ */
+
 const Radialbarstyle = createGlobalStyle`
     .radialbarblock{
         background-color: #FBFBFB;

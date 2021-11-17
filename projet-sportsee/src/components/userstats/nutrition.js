@@ -5,11 +5,22 @@ import apple from '../../assets/apple.png'
 import cheeseburger from '../../assets/cheeseburger.png'
 import propTypes from 'prop-types';
 
+/**
+ * Create cards with differents nutritions' datas of the user
+ * 
+ * @class
+ * @this {Nutritionlayout}
+ * @param {dataKey} datakey of the user
+ * @param {this.props.keyData.calorieCount} calories count of the user
+ * @param {this.props.keyData.proteinCount} protein count of the user
+ * @param {this.props.keyData.carbohydrateCount} carbohydrate count of the user
+ * @param {this.props.keyData.lipidCount} lipid count of the user
+ * @param {pics} pics for differents nutritions
+ */
 
 export default class Nutritionlayout extends React.Component{
 
     render(){
-/*         const {datascalories, datasproteines, datasglucides, dataslipides, id}= this.props; */
 
         return(
             <div className="nutritionlayoutblock"  key={this.props.dataKey}>
@@ -53,6 +64,14 @@ export default class Nutritionlayout extends React.Component{
         )
     }
 }
+
+  /**
+ * Check the types of the datas
+ * 
+ * @Property
+ * @this {propTypes}
+ */
+
 
 Nutritionlayout.propTypes={
     datakey:propTypes.number,
