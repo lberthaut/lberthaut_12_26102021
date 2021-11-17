@@ -1,5 +1,6 @@
 import React from 'react';
-import {ResponsiveContainer, PieChart, Pie, Cell, } from 'recharts'
+import {ResponsiveContainer, PieChart, Pie, Cell, } from 'recharts';
+import propTypes from 'prop-types';
 
 export default class radialbar extends React.Component{
   render(){
@@ -41,4 +42,13 @@ export default class radialbar extends React.Component{
             </div>
         )
     }
+}
+
+radialbar.propTypes={
+  datasSessionsTime: propTypes.oneOfType([
+    propTypes.array,
+    propTypes.object,
+  ]
+  ),
+  dataKey:propTypes.number,
 }

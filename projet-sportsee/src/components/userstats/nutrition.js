@@ -3,6 +3,7 @@ import fire from '../../assets/fire.png'
 import proteins from '../../assets/proteins.png'
 import apple from '../../assets/apple.png'
 import cheeseburger from '../../assets/cheeseburger.png'
+import propTypes from 'prop-types';
 
 
 export default class Nutritionlayout extends React.Component{
@@ -51,4 +52,12 @@ export default class Nutritionlayout extends React.Component{
             </div>
         )
     }
+}
+
+Nutritionlayout.propTypes={
+    datakey:propTypes.number,
+    calorieCount:propTypes.number,
+    proteinCount:propTypes.number,
+    carbohydrateCount:propTypes.number,
+    lipidCount:propTypes.number,
 }

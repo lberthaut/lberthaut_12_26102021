@@ -1,5 +1,6 @@
 import React from 'react';
-import {LineChart, ResponsiveContainer, XAxis, YAxis, Line, Tooltip} from 'recharts'
+import {LineChart, ResponsiveContainer, XAxis, YAxis, Line, Tooltip} from 'recharts';
+import propTypes from 'prop-types';
 
 
 export default class Averagesessionstime extends React.Component{
@@ -47,6 +48,7 @@ export default class Averagesessionstime extends React.Component{
         )
 }}
 
+
 function CustomTooltip({ active, payload }) {
     if (active && payload) {
       return (
@@ -55,3 +57,19 @@ function CustomTooltip({ active, payload }) {
     }
     return null;
   }
+
+  
+Averagesessionstime.propTypes={
+  datasSessionsTime: propTypes.oneOfType([
+    propTypes.array,
+    propTypes.object,
+  ]
+  ),
+  dataKey:propTypes.number,
+}
+
+
+  CustomTooltip.propTypes={
+    active: propTypes.bool,
+    payload: propTypes.array,
+  };

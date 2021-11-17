@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 
 export default class Hellobanner extends React.Component{
@@ -14,4 +15,9 @@ export default class Hellobanner extends React.Component{
             </div>
         )
     }
+}
+
+Hellobanner.propTypes={
+    username:propTypes.string,
+    id: propTypes.number,
 }

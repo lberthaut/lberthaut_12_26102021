@@ -69,15 +69,12 @@ export default class Userpage extends React.Component {
         });
     }
 
-    
-    
     render(){
         let datasScore=this.state.user.score;
         if(datasScore===undefined){
             datasScore=this.state.user.todayScore;
         }
 
-    
         return(
             <Fragment>
                 <Hellobanner  username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>

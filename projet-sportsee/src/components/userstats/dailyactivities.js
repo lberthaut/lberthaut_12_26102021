@@ -1,6 +1,6 @@
 import React from 'react';
 import {BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Legend, Bar, Tooltip}  from 'recharts';
-
+import propTypes from 'prop-types';
 
 
 export default class Dailyactivities extends React.Component{
@@ -88,3 +88,17 @@ export default class Dailyactivities extends React.Component{
     </ul>
   ) : null;
 }
+
+
+Dailyactivities.propTypes={
+  datasSessionsTime: propTypes.oneOfType([
+    propTypes.array,
+    propTypes.object,
+  ]),
+  dataKey:propTypes.number,
+};
+
+  CustomTooltip.propTypes={
+    active: propTypes.bool,
+    payload: propTypes.array,
+  };

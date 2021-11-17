@@ -1,5 +1,6 @@
 import React from 'react';
 import {RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Radar} from 'recharts';
+import propTypes from 'prop-types';
 
 export default class Radargraph extends React.Component{
     render(){
@@ -32,3 +33,12 @@ export default class Radargraph extends React.Component{
         )
     }
 }
+
+Radargraph.propTypes={
+    datasSessionsTime: propTypes.oneOfType([
+      propTypes.array,
+      propTypes.object,
+    ]
+    ),
+    dataKey:propTypes.number,
+  }
