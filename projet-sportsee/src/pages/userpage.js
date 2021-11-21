@@ -14,12 +14,17 @@ import Nutritionlayoutstyle from '../styles/nutritionlayoutstyle.js';
 import Usefetch from '../services/api.js';
 
 /**
- * Create a graph of Average session time of sport
+ * Render the user's page with his datas
  * 
  * @class
  * @this {Userpage}
  * @param {dataKey} datakey of the user
- * @param {this.props.datasSessionsTime} sport's data of the user per session of sport
+ * @param {this.state.userSessions.sessions} sport's data of the user per session of sport
+ * @param {this.state.userActivity.sessions} sport's data of the user per day
+ * @param {this.state.user.userInfos.firstName} name of the user
+ * @param {this.state.user.keyData} nutrition's datas of the user
+ * @param {this.state.userPerformance.data} sport's data of the user splited to different kinds
+ * @param {datasScore} sport's purcentage of the user for the current day
  */
 
 export default class Userpage extends React.Component {
