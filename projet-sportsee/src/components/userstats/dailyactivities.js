@@ -18,12 +18,10 @@ export default class Dailyactivities extends React.Component{
      return(
        <div className="dailyactivitiesblock" key={this.props.dataKey}>
           <h2 className="dailyactivitiestitle">Activités quotidienne</h2>
-          <ResponsiveContainer height="80%" width="95%">
+          <ResponsiveContainer height="100%" width="95%" >
             <BarChart 
             data={this.props.datasActivities} 
             barGap={8} 
-            width={800} 
-            height={300}
             >
             <XAxis 
             dataKey="name" 

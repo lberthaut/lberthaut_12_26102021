@@ -12,6 +12,8 @@ import Radialbarstyle from '../styles/radialbarstyle.js'
 import Nutritionlayout from '../components/userstats/nutrition.js'
 import Nutritionlayoutstyle from '../styles/nutritionlayoutstyle.js';
 import Usefetch from '../services/api.js';
+import Error from '../components/userstats/error.js';
+import Errorstyle from '../styles/errorstyle.js';
 
 /**
  * Render the user's page with his datas
@@ -47,7 +49,8 @@ export default class Userpage extends React.Component {
             userPerformance:{
                 kind:{1:null, 2:null, 3: null, 4:null, 5:null, 6:null},
                 data:{value:null, kind:null}
-            }
+            },
+            error: null
         }
         
     }
@@ -62,16 +65,22 @@ export default class Userpage extends React.Component {
                 score:data.score,
                 todayScore:data.todayScore
             }})
-        });
+        }).catch(error=>{
+            this.setState({error:error})
+        })
         Usefetch.getUserAverageSessions(urlId).then(data=>{
             this.setState({userSessions:{
                 sessions:data.sessions
             }})
+        }).catch(error=>{
+            this.setState({error:error})
         });
         Usefetch.getUserActivity(urlId).then(data=>{
             this.setState({userActivity:{
                 sessions:data.sessions
             }})
+        }).catch(error=>{
+            this.setState({error:error})
         });
         Usefetch.getUserPerformance(urlId).then(data=>{
             data.data.forEach(value=> value.kind= data.kind[value.kind]);
@@ -79,6 +88,8 @@ export default class Userpage extends React.Component {
                 kind:data.kind,
                 data:data.data
             }})
+        }).catch(error=>{
+            this.setState({error:error})
         });
     }
 
@@ -88,15 +99,29 @@ export default class Userpage extends React.Component {
             datasScore=this.state.user.todayScore;
         }
 
-        return(
-            <Fragment>
-                <Hellobanner  username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>
-                <Dailyactivities dataKey={this.state.user.id} datasActivities={this.state.userActivity.sessions}/><Dailyactivitiesstyle/>
-                <Averagesessionstime dataKey={this.state.user.id} datasSessionsTime={this.state.userSessions.sessions}/><Averagesessionstimestyle/>
-                <Radargraph dataKey={this.state.user.id} datasRadar={this.state.userPerformance.data} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
-                <RadialBar dataKey={this.state.user.id} datasRadial={datasScore}/><Radialbarstyle/>
-                <Nutritionlayout dataKey={this.state.user.id} keyData={this.state.user.keyData}/><Nutritionlayoutstyle/>
-            </Fragment>
-        )
+        if(this.state.error){
+                return (
+                    <Fragment>
+                        <Error/><Errorstyle/>
+                    </Fragment>
+                )
+                }else{
+                return(
+                    <Fragment>
+                        <div className="components">
+                            <Hellobanner  username={this.state.user.userInfos.firstName}/><Hellobannerstyle/>
+                            <div className="sportivedatas">
+                                <div className="graphsblock">
+                                    <Dailyactivities dataKey={this.state.user.id} datasActivities={this.state.userActivity.sessions}/><Dailyactivitiesstyle/>
+                                    <Averagesessionstime dataKey={this.state.user.id} datasSessionsTime={this.state.userSessions.sessions}/><Averagesessionstimestyle/>
+                                    <Radargraph dataKey={this.state.user.id} datasRadar={this.state.userPerformance.data} name={this.state.user.userInfos.firstName}/><Radargraphstyle/>
+                                    <RadialBar dataKey={this.state.user.id} datasRadial={datasScore}/><Radialbarstyle/>
+                                </div>
+                                <Nutritionlayout dataKey={this.state.user.id} keyData={this.state.user.keyData}/><Nutritionlayoutstyle/>
+                            </div>
+                        </div>
+                    </Fragment>
+                )
+        }
     }
 }

@@ -10,25 +10,14 @@ import {createGlobalStyle} from "styled-components";
 const Radialbarstyle = createGlobalStyle`
     .radialbarblock{
         background-color: #FBFBFB;
-        position: absolute;
         margin: 0;
-        width: 258px;
-        height: 263px;
-        top: 720px;
-        left: 785px;
+        width: 30%;
+        height: 250px;
         border-radius: 5px;
     }
 
     .scoretitle{
-        position: absolute;
         margin:0;
-        top: 20px;
-        left: 20px;
-    }
-
-    .scoreobjectiveblock{
-        position: absolute;
-
     }
 
     .scorecontent{
@@ -42,13 +31,17 @@ const Radialbarstyle = createGlobalStyle`
         width: 60px;
         text-align: center;
         margin: 0;
-        opacity: 0.6
+        opacity: 0.6;
     }
 
     .scoreobjectiveblock{
-        position: absolute;
-        top: 93px;
-        left: 99px;
+        z-index: 10;
+        position: relative;
+        bottom: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 80px;
     }
 `
 

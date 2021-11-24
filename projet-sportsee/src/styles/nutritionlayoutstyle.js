@@ -9,14 +9,10 @@ import {createGlobalStyle} from "styled-components";
 
 const Nutritionlayoutstyle = createGlobalStyle`
     .nutritionlayoutblock{
-        width: 258px;
-        height: 693px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        position: absolute;
-        top: 290px;
-        left: 1100px;
+        padding-bottom: 2%;
     }
     
     .iconblock{
@@ -54,6 +50,7 @@ const Nutritionlayoutstyle = createGlobalStyle`
         height: 60px;
         background-color: #FBFBFB;
         padding: 25px;
+        margin-bottom: 5%;
     }
 
     .nutritioninfos{

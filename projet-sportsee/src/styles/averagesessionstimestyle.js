@@ -9,14 +9,16 @@ import {createGlobalStyle} from "styled-components";
 
 
 const Averagesessionstimestyle = createGlobalStyle`
+    .graphsessionstimeblock{
+        width: 30%;
+        height: 264px;
+    }
+    
     .graphaveragetime{
-        position: absolute;
-        top: 720px;
-        left: 215px;
         background-color: red;
-        border-radius: 5px;
-        width: 258px;
-        height: 263px;
+        width: 100%;
+        height: 80%;
+        border-radius: 5px 5px 0 0;
     }
 
     .graphaveragetime>.recharts-responsive-container>.recharts-wrapper>.recharts-legend-wrapper{
@@ -30,13 +32,16 @@ const Averagesessionstimestyle = createGlobalStyle`
     }
 
     .days{
+        position: absolute;
         display: flex;
-        width: 230px;
+        margin-left: 0.5%;
         flex-direction: row;
         justify-content: space-between;
-        position: absolute;
-        top: 940px;
-        left: 228px;
+        background-color: red;
+        border-radius: 0 0 5px 5px;
+        margin: 0;
+        width: 16%;
+        padding: 0 1.9% 0 1%;
         &>p{
             color: white;
             font-size: 12px;
@@ -45,14 +50,13 @@ const Averagesessionstimestyle = createGlobalStyle`
     }
 
     .titlegraph{
-        position: absolute;
-        top: 730px;
-        left: 250px;
+        margin:0 0 0 5%;
+        padding-top: 4%;
         color: white;
         opacity: 0.6;
-        width: 140px;
         line-height: 24px;
-        font-size: 15px;
+        font-size: 80%;
+        width: 60%;
     }
 `
 

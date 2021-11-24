@@ -6,6 +6,7 @@ import Horizontallayout from '../components/UI/horizontallayout.js';
 import Verticallayouts from '../components/UI/verticallayouts.js';
 import Layoutstyle from '../styles/layoutsstyle.js';
 
+
 /**
  * Create routes for differents components of the site
  * 
@@ -24,7 +25,6 @@ export default class App extends React.Component{
                 <Verticallayouts/><Layoutstyle/>
                     <Route exact path='/:id' render={(props) => <Userpage {...props}/>}/>
                 <Pageuserstyle/>
-               
             </BrowserRouter>
         )
     }

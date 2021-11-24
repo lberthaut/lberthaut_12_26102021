@@ -18,12 +18,11 @@ export default class Averagesessionstime extends React.Component{
         return(
             <div className="graphsessionstimeblock" key={this.props.dataKey}>
                 <div className="graphaveragetime">
-                <ResponsiveContainer>
+                <p className="titlegraph">Durée moyenne des sessions</p>
+                <ResponsiveContainer height="100%" width="100%">
                     <LineChart 
-                    width={258} 
-                    height={263} 
                     data={this.props.datasSessionsTime}
-                    margin={{ top: 100, bottom: 50 }}
+                    margin={{ top: 10, bottom: 80 }}
                     >
                     <XAxis 
                     dataKey="day" 
@@ -52,7 +51,6 @@ export default class Averagesessionstime extends React.Component{
                 </ResponsiveContainer>
                 </div>
                 <div className="days"><p>L</p><p>M</p><p>M</p><p>J</p><p>V</p><p>S</p><p>D</p></div>
-                <p className="titlegraph">Durée moyenne des sessions</p>
             </div>
         )
 }}

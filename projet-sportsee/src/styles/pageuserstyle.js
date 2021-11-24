@@ -11,12 +11,29 @@ const Pageuserstyle = createGlobalStyle`
 body{
     margin: 0;
     font-family: Calibri, Roboto;
-    height: 1024px;
 }
 
-#root{
-    width: 100%;
-    height: 100%;
+.components{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.sportivedatas{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.graphsblock{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-between;
+    margin-right: 3%;
 }
 `
 

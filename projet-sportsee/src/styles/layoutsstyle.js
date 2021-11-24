@@ -10,66 +10,85 @@ import {createGlobalStyle} from "styled-components";
 const Layoutstyle = createGlobalStyle`
 .horizontallayout{
     background-color: black;
-    width: 1440 px;
-    height: 91px;
+    height: 6%;
     display: flex;
-    vertical-align: center;
     justify-content: start;
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
 }
+
 .logo{
-    margin-left: 50px;
-    height: 57px;
+    margin-left: 10%;
+    margin-top: 3%;
+    width: 60%;
 }
 
 .menu{
-    width: 70%;
+    width: 65%;
     display: flex;
     justify-content: space-between;
-    margin-left: 100px;
+    margin-left: 3%;
+    margin-right: 4%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .menu>a{
     color: white;
     text-decoration: none;
-    font-size: 24px;
+    font-weight: bold;
+    &>p{
+        margin: 0;
+    }
 }
 
 .verticallayout{
     background-color: black;
-    width: 117px;
-    height: 1024px;
-    margin: 0;
+    position: fixed;
+    bottom: 0;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 6em;
+    
 }
 
 .iconsbar{
-    height: 35%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 80px;
-    padding-top: 100px;
-    padding-left: 25px;
+    padding: 0;
+    margin: auto;
 }
 
 .icons{
-    width: 64px;
-    height: 64px;
+    width: 2.9vw;
+    height: 3vw;
     border-radius: 6px
     border: none;
+    &>img{
+        width: 100%;
+        height: 80%;
+    }
 }
 
 .copyright{
-    color: white;
-    transform: rotate(270deg);
-    font-size: 12px;
-    width: 150px;
-    margin: 0;
-    padding-bottom: 40px;
+position: absolute;
+  left: -3rem;
+  bottom: 12.5%;
+  width: 200px;
+  margin: 0;
+  transform: rotate(-90deg);
+  text-align: center;
+  color: white;
+  font-size: x-small;
 }
 
 `
