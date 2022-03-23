@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 /**
  * Stylising the component
@@ -34,6 +34,28 @@ body{
     width: 70%;
     justify-content: space-between;
     margin-right: 3%;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .components{
+        margin-left: 15%;
+    }
+    .sportivedatas{
+        display: flex;
+        flex-direction: column;
+    }
+    .graphsblock{
+        width: 100%;
+    }
+
+    .nutritionlayoutblock{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 `
 

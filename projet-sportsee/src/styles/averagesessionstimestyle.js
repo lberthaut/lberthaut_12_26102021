@@ -1,17 +1,19 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-  /**
- * Stylising the component
- * 
- * @const
- * @this {Averagesessionstimestyle}
- */
+/**
+* Stylising the component
+* 
+* @const
+* @this {Averagesessionstimestyle}
+*/
 
 
 const Averagesessionstimestyle = createGlobalStyle`
     .graphsessionstimeblock{
         width: 30%;
         height: 264px;
+        background-color: red;
+        border-radius: 5px;
     }
     
     .graphaveragetime{

@@ -11,7 +11,7 @@ import RadialBar from "../components/userstats/radialbar.js";
 import Radialbarstyle from "../styles/radialbarstyle.js";
 import Nutritionlayout from "../components/userstats/nutrition.js";
 import Nutritionlayoutstyle from "../styles/nutritionlayoutstyle.js";
-import Usefetch from "../services/api.js";
+import Usefetch from "../services/mock.js";
 import Error from "../components/userstats/error.js";
 import Errorstyle from "../styles/errorstyle.js";
 
