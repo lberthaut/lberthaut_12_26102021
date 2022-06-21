@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/projetsportsee/static/js/main.6f027a52.chunk.js",
-    "main.js.map": "/projetsportsee/static/js/main.6f027a52.chunk.js.map",
-    "runtime-main.js": "/projetsportsee/static/js/runtime-main.8d6fb39e.js",
-    "runtime-main.js.map": "/projetsportsee/static/js/runtime-main.8d6fb39e.js.map",
-    "static/js/2.1fc15e21.chunk.js": "/projetsportsee/static/js/2.1fc15e21.chunk.js",
-    "static/js/2.1fc15e21.chunk.js.map": "/projetsportsee/static/js/2.1fc15e21.chunk.js.map",
-    "static/js/3.49a05746.chunk.js": "/projetsportsee/static/js/3.49a05746.chunk.js",
-    "static/js/3.49a05746.chunk.js.map": "/projetsportsee/static/js/3.49a05746.chunk.js.map",
-    "index.html": "/projetsportsee/index.html",
-    "static/js/2.1fc15e21.chunk.js.LICENSE.txt": "/projetsportsee/static/js/2.1fc15e21.chunk.js.LICENSE.txt"
+    "main.js": "/projetsportsee/12/static/js/main.2ea80ea9.chunk.js",
+    "main.js.map": "/projetsportsee/12/static/js/main.2ea80ea9.chunk.js.map",
+    "runtime-main.js": "/projetsportsee/12/static/js/runtime-main.d6104710.js",
+    "runtime-main.js.map": "/projetsportsee/12/static/js/runtime-main.d6104710.js.map",
+    "static/js/2.e1d418b4.chunk.js": "/projetsportsee/12/static/js/2.e1d418b4.chunk.js",
+    "static/js/2.e1d418b4.chunk.js.map": "/projetsportsee/12/static/js/2.e1d418b4.chunk.js.map",
+    "static/js/3.49a05746.chunk.js": "/projetsportsee/12/static/js/3.49a05746.chunk.js",
+    "static/js/3.49a05746.chunk.js.map": "/projetsportsee/12/static/js/3.49a05746.chunk.js.map",
+    "index.html": "/projetsportsee/12/index.html",
+    "static/js/2.e1d418b4.chunk.js.LICENSE.txt": "/projetsportsee/12/static/js/2.e1d418b4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d6fb39e.js",
-    "static/js/2.1fc15e21.chunk.js",
-    "static/js/main.6f027a52.chunk.js"
+    "static/js/runtime-main.d6104710.js",
+    "static/js/2.e1d418b4.chunk.js",
+    "static/js/main.2ea80ea9.chunk.js"
   ]
 }
