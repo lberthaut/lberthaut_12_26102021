@@ -113,8 +113,6 @@ export default class Userpage extends React.Component {
       });
   }
 
-
-
   render() {
     let datasScore = this.state.user.score;
     if (datasScore === undefined) {

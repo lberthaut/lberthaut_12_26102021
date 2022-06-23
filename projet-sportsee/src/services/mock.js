@@ -1,6 +1,5 @@
-
 /**
- * fetch users' datas from mocked datas' file
+ * fetch users' datas from an URL
  *
  * @class
  * @this {Usefetch}
