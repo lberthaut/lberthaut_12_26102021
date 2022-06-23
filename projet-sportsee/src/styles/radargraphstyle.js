@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 /**
  * Stylising the component
@@ -13,8 +13,8 @@ const Radargraphstyle = createGlobalStyle`
         color: white;
         border-radius: 5px;
         font-color: white;
-        width: 35%;
-        height: 250px;
+        width: 32%;
+        height: 40%;
     }
 
     .radargraphblock tspan{

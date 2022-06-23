@@ -11,7 +11,7 @@ import { createGlobalStyle } from "styled-components";
 const Averagesessionstimestyle = createGlobalStyle`
     .graphsessionstimeblock{
         width: 30%;
-        height: 264px;
+        height: 39.7%;
         background-color: red;
         border-radius: 5px;
     }
@@ -19,7 +19,7 @@ const Averagesessionstimestyle = createGlobalStyle`
     .graphaveragetime{
         background-color: red;
         width: 100%;
-        height: 80%;
+        height: 85%;
         border-radius: 5px 5px 0 0;
     }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {LineChart, ResponsiveContainer, XAxis, YAxis, Line, Tooltip} from 'recharts';
+import { LineChart, ResponsiveContainer, XAxis, YAxis, Line, Tooltip } from 'recharts';
 import propTypes from 'prop-types';
 
 
@@ -12,48 +12,49 @@ import propTypes from 'prop-types';
  * @param {this.props.datasSessionsTime} sport's data of the user per session of sport
  */
 
-export default class Averagesessionstime extends React.Component{
+export default class Averagesessionstime extends React.Component {
 
-    render(){
-        return(
-            <div className="graphsessionstimeblock" key={this.props.dataKey}>
-                <div className="graphaveragetime">
-                <p className="titlegraph">Durée moyenne des sessions</p>
-                <ResponsiveContainer height="100%" width="100%">
-                    <LineChart 
-                    data={this.props.datasSessionsTime}
-                    margin={{ top: 10, bottom: 80 }}
-                    >
-                    <XAxis 
-                    dataKey="day" 
-                    stroke="rgba(255, 255, 255, 0.6)"
-                    tickLine={false}
-                    dy={10}
-                    tick={false}
-                    hide={true}
-                    />
-                    <YAxis 
-                    dataKey="sessionLength"
-                    hide={true}
-                    />
-                    <Tooltip
-                    content={<CustomTooltip />}
-                    cursor={{ stroke: 'rgba(255,255,255, 0.6)' }}
-                    />
-                    <Line 
-                    type="natural" 
-                    dataKey="sessionLength" 
-                    stroke="rgba(255, 255, 255, 0.6)"
-                    strokeWidth={2}
-                    dot={false}
-                    />
-                    </LineChart>
-                </ResponsiveContainer>
-                </div>
-                <div className="days"><p>L</p><p>M</p><p>M</p><p>J</p><p>V</p><p>S</p><p>D</p></div>
-            </div>
-        )
-}}
+  render() {
+    return (
+      <div className="graphsessionstimeblock" key={this.props.dataKey}>
+        <div className="graphaveragetime">
+          <p className="titlegraph">Durée moyenne des sessions</p>
+          <ResponsiveContainer height="100%" width="100%">
+            <LineChart
+              data={this.props.datasSessionsTime}
+              margin={{ top: 10, bottom: 80 }}
+            >
+              <XAxis
+                dataKey="day"
+                stroke="rgba(255, 255, 255, 0.6)"
+                tickLine={false}
+                dy={10}
+                tick={false}
+                hide={true}
+              />
+              <YAxis
+                dataKey="sessionLength"
+                hide={true}
+              />
+              <Tooltip
+                content={<CustomTooltip />}
+                cursor={{ stroke: 'rgba(255,255,255, 0.6)' }}
+              />
+              <Line
+                type="natural"
+                dataKey="sessionLength"
+                stroke="rgba(255, 255, 255, 0.6)"
+                strokeWidth={2}
+                dot={false}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="days"><p>L</p><p>M</p><p>M</p><p>J</p><p>V</p><p>S</p><p>D</p></div>
+      </div>
+    )
+  }
+}
 
 /**
  * Create a span, when mouse flyover graph
@@ -65,32 +66,32 @@ export default class Averagesessionstime extends React.Component{
  */
 
 function CustomTooltip({ active, payload }) {
-    if (active && payload) {
-      return (
-        <span className="tooltipaveragesession">{`${payload[0].value} min`}</span>
-      );
-    }
-    return null;
+  if (active && payload) {
+    return (
+      <span className="tooltipaveragesession">{`${payload[0].value} min`}</span>
+    );
   }
+  return null;
+}
 
-  /**
- * Check the types of the datas
- * 
- * @Property
- * @this {propTypes}
- */
+/**
+* Check the types of the datas
+* 
+* @Property
+* @this {propTypes}
+*/
 
-Averagesessionstime.propTypes={
+Averagesessionstime.propTypes = {
   datasSessionsTime: propTypes.oneOfType([
     propTypes.array,
     propTypes.object,
   ]
   ),
-  dataKey:propTypes.number,
+  dataKey: propTypes.number,
 }
 
 
-  CustomTooltip.propTypes={
-    active: propTypes.bool,
-    payload: propTypes.array,
-  };
+CustomTooltip.propTypes = {
+  active: propTypes.bool,
+  payload: propTypes.array,
+};
