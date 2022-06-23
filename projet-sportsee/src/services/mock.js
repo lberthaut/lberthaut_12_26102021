@@ -11,7 +11,7 @@ export default class Usefetch {
     return fetch("mockeddatas.json")
       .then((result) => result.json())
       .then((data) => {
-        return data.USER_MAIN_DATA.find((user) => user.id === userId);
+        return data.USER_MAIN_DATA.find((user) => user.id == userId);
       });
   }
 
@@ -19,7 +19,7 @@ export default class Usefetch {
     return fetch("mockeddatas.json")
       .then((result) => result.json())
       .then((data) => {
-        return data.USER_ACTIVITY.find((user) => user.userId === userId);
+        return data.USER_ACTIVITY.find((user) => user.userId == userId);
       });
   }
 
@@ -27,7 +27,7 @@ export default class Usefetch {
     return fetch("mockeddatas.json")
       .then((result) => result.json())
       .then((data) => {
-        return data.USER_AVERAGE_SESSIONS.find((user) => user.userId === userId);
+        return data.USER_AVERAGE_SESSIONS.find((user) => user.userId == userId);
       });
   }
 
@@ -35,7 +35,7 @@ export default class Usefetch {
     return fetch("mockeddatas.json")
       .then((result) => result.json())
       .then((data) => {
-        return data.USER_PERFORMANCE.find((user) => user.userId === userId);
+        return data.USER_PERFORMANCE.find((user) => user.userId == userId);
       });
   }
 }
