@@ -1,16 +1,16 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-  /**
- * Stylising the component
- * 
- * @const
- * @this {Dailyactivitiesstyle}
- */
+/**
+* Stylising the component
+* 
+* @const
+* @this {Dailyactivitiesstyle}
+*/
 
 const Dailyactivitiesstyle = createGlobalStyle`
     .dailyactivitiesblock{
         width: 100%;
-        height: 50%;
+        height: 45%;
         background-color: #FBFBFB;
         border-radius: 5px;
         &>.recharts-responsive-container{

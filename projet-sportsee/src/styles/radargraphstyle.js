@@ -14,7 +14,7 @@ const Radargraphstyle = createGlobalStyle`
         border-radius: 5px;
         font-color: white;
         width: 32%;
-        height: 40%;
+        height: 100%;
     }
 
     .radargraphblock tspan{

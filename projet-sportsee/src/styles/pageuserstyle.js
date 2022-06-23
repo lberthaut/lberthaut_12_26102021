@@ -22,7 +22,7 @@ body{
 }
 
 .sportivedatas{
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     flex-direction: row;
 }
@@ -35,6 +35,15 @@ body{
     justify-content: space-between;
     margin-right: 3%;
 }
+
+.radialblock{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 35%;
+        width: 100%;
+        justify-content: space-between;
+    }
 
 @media only screen and (max-width: 1024px) {
 

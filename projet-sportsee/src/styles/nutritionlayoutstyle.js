@@ -1,18 +1,18 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-  /**
- * Stylising the component
- * 
- * @const
- * @this {Nutritionlayoutstyle}
- */
+/**
+* Stylising the component
+* 
+* @const
+* @this {Nutritionlayoutstyle}
+*/
 
 const Nutritionlayoutstyle = createGlobalStyle`
     .nutritionlayoutblock{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-bottom: 2%;
+        height: 91vh;
     }
     
     .iconblock{
@@ -50,7 +50,6 @@ const Nutritionlayoutstyle = createGlobalStyle`
         height: 60px;
         background-color: #FBFBFB;
         padding: 25px;
-        margin-bottom: 5%;
     }
 
     .nutritioninfos{

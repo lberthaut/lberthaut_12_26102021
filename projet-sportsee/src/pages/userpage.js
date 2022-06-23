@@ -139,22 +139,23 @@ export default class Userpage extends React.Component {
                   datasActivities={this.state.userActivity.sessions}
                 />
                 <Dailyactivitiesstyle />
-                <Averagesessionstime
+                <div className="radialblock"><Averagesessionstime
                   dataKey={this.state.user.id}
                   datasSessionsTime={this.state.userSessions.sessions}
                 />
-                <Averagesessionstimestyle />
-                <Radargraph
-                  dataKey={this.state.user.id}
-                  datasRadar={this.state.userPerformance.data}
-                  name={this.state.user.userInfos.firstName}
-                />
-                <Radargraphstyle />
-                <RadialBar
-                  dataKey={this.state.user.id}
-                  datasRadial={datasScore}
-                />
-                <Radialbarstyle />
+                  <Averagesessionstimestyle />
+                  <Radargraph
+                    dataKey={this.state.user.id}
+                    datasRadar={this.state.userPerformance.data}
+                    name={this.state.user.userInfos.firstName}
+                  />
+                  <Radargraphstyle />
+                  <RadialBar
+                    dataKey={this.state.user.id}
+                    datasRadial={datasScore}
+                  />
+                  <Radialbarstyle />
+                </div>
               </div>
               <Nutritionlayout
                 dataKey={this.state.user.id}

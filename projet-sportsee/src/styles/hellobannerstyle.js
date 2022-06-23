@@ -1,11 +1,11 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-  /**
- * Stylising the component
- * 
- * @const
- * @this {Hellobannerstyle}
- */
+/**
+* Stylising the component
+* 
+* @const
+* @this {Hellobannerstyle}
+*/
 
 const Hellobannerstyle = createGlobalStyle`
     .banner{
@@ -31,6 +31,12 @@ const Hellobannerstyle = createGlobalStyle`
 
     .bannerdescription{
         margin: 1%;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .banner{
+            margin-top: 2%;
+        }
     }
 `
 
