@@ -9,7 +9,7 @@
 
 export default class Usefetch {
   static async getUser(userId) {
-    return fetch("mockeddatas.json")
+    return fetch("./mockeddatas.json")
       .then((result) => result.text())
       .then((data) => {
         return data.USER_MAIN_DATA.find((user) => user.id === userId);
