@@ -7,30 +7,31 @@
  * @param {URL} URLs of the users' datas
  */
 
-export default class Usefetch {
- 
+/*disabled for mocked datas */
 
- static async getUser(userId){
-  return fetch('http://localhost:3000/user/'+ userId)
-  .then(response => response.json())
-  .then(data=>data.data)
+export default class Usefetch {
+
+  static async getUser(userId) {
+    return fetch('http://localhost:3000/user/' + userId)
+      .then(response => response.json())
+      .then(data => data.data)
   }
 
-  static async getUserActivity(userId){
-    return fetch('http://localhost:3000/user/'+ userId + '/activity')
-    .then(response => response.json())
-    .then(data=>data.data)
-    }
-
-    static async getUserAverageSessions(userId){
-      return fetch('http://localhost:3000/user/'+ userId + '/average-sessions')
+  static async getUserActivity(userId) {
+    return fetch('http://localhost:3000/user/' + userId + '/activity')
       .then(response => response.json())
-      .then(data=>data.data)
-      }
+      .then(data => data.data)
+  }
 
-      static async getUserPerformance(userId){
-        return fetch('http://localhost:3000/user/'+ userId + '/performance')
-        .then(response => response.json())
-        .then(data=>data.data)
-        }
+  static async getUserAverageSessions(userId) {
+    return fetch('http://localhost:3000/user/' + userId + '/average-sessions')
+      .then(response => response.json())
+      .then(data => data.data)
+  }
+
+  static async getUserPerformance(userId) {
+    return fetch('http://localhost:3000/user/' + userId + '/performance')
+      .then(response => response.json())
+      .then(data => data.data)
+  }
 }
