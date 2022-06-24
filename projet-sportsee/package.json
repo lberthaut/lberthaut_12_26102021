@@ -1,7 +1,7 @@
 {
   "name": "projet-sportsee",
   "version": "0.1.0",
-  "homepage": "https://lberthaut.github.io/projetsportsee/12",
+  "homepage": "/projetsportsee/12",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
