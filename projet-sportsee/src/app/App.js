@@ -5,6 +5,7 @@ import Pageuserstyle from '../styles/pageuserstyle.js';
 import Horizontallayout from '../components/UI/horizontallayout.js';
 import Verticallayouts from '../components/UI/verticallayouts.js';
 import Layoutstyle from '../styles/layoutsstyle.js';
+import Choicepage from '../components/UI/choicepage.js';
 
 
 /**
@@ -23,6 +24,7 @@ export default class App extends React.Component {
             <BrowserRouter>
                 <Horizontallayout />
                 <Verticallayouts /><Layoutstyle />
+                <Route exact path='/projetsportsee' component={Choicepage} />
                 <Route path='/projetsportsee/:id' render={(props) => <Userpage {...props} />} />
                 <Pageuserstyle />
             </BrowserRouter>

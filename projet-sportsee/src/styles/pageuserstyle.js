@@ -45,6 +45,53 @@ body{
         justify-content: space-between;
     }
 
+    .choiceusertitle{
+        text-align: center;
+        margin-top: 8%;
+        margin-bottom: 12%;
+
+    }
+
+    .buttonsblock{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-evenly;
+    }
+
+    .link-2{
+        font-size: 32px;
+    }
+
+    .link-2>a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .link-2 a:hover {
+  color: red;
+}
+
+.link-2 a:before {
+  content: '';
+  border-bottom: solid 1px red;
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  
+  opacity: 0;
+}
+
+.link-2 a:hover:before {
+  opacity: 1.0;
+}
+
+.link-2 a, .link-2 a:before {
+  -webkit-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+}
+
 @media only screen and (max-width: 1024px) {
 
     .components{
