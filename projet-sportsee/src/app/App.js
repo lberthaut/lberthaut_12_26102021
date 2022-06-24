@@ -23,7 +23,7 @@ export default class App extends React.Component {
             <BrowserRouter>
                 <Horizontallayout />
                 <Verticallayouts /><Layoutstyle />
-                <Route exact path='/projetsportsee/:id' render={(props) => <Userpage {...props} />} />
+                <Route path='/projetsportsee/:id' render={(props) => <Userpage {...props} />} />
                 <Pageuserstyle />
             </BrowserRouter>
         )
