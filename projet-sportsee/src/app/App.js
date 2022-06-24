@@ -1,6 +1,6 @@
 import React from 'react';
 import Userpage from '../pages/userpage.js';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import Pageuserstyle from '../styles/pageuserstyle.js';
 import Horizontallayout from '../components/UI/horizontallayout.js';
 import Verticallayouts from '../components/UI/verticallayouts.js';
@@ -24,8 +24,10 @@ export default class App extends React.Component {
             <BrowserRouter>
                 <Horizontallayout />
                 <Verticallayouts /><Layoutstyle />
-                <Route exact path='/projetsportsee' component={Choicepage} />
-                <Route path='/projetsportsee/:id' render={(props) => <Userpage {...props} />} />
+                <Switch>
+                    <Route exact path='/projetsportsee' component={Choicepage} />
+                    <Route path='/projetsportsee/:id' render={(props) => <Userpage {...props} />} />
+                </Switch>
                 <Pageuserstyle />
             </BrowserRouter>
         )
